@@ -1,8 +1,8 @@
-﻿using ExampleFramework.ImGuiDemo;
+﻿using ExampleImGui;
 using Hexa.NET.ImGui;
 using Hexa.NET.Raylib;
 
-Raylib.InitWindow(1280, 720, "Example");
+Raylib.InitWindow(1280, 720, "ExampleRaylib");
 
 Raylib.SetTargetFPS(60);
 

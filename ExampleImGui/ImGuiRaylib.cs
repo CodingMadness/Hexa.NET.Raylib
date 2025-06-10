@@ -12,7 +12,6 @@
         private static readonly MouseCursor[] MouseCursorMap = new MouseCursor[(int)ImGuiMouseCursor.Count];
 
         private static bool LastFrameFocused;
-
         private static bool LastControlPressed;
         private static bool LastShiftPressed;
         private static bool LastAltPressed;
@@ -127,7 +126,7 @@
                     io.AddMouseButtonEvent(imGuiMouse, true);
                 else if (Raylib.IsMouseButtonReleased(rayMouse))
                     io.AddMouseButtonEvent(imGuiMouse, false);
-            };
+            }
 
             setMouseEvent(io, (int)MouseButton.Left, (int)ImGuiMouseButton.Left);
             setMouseEvent(io, (int)MouseButton.Right, (int)ImGuiMouseButton.Right);
@@ -168,8 +167,7 @@
 
         private static void ImGuiTriangleVert(ImDrawVert idx_vert)
         {
-            Color* c;
-            c = (Color*)&idx_vert.Col;
+            var c = (Color*)&idx_vert.Col;
             Raylib.RlColor4Ub(c->R, c->G, c->B, c->A);
             Raylib.RlTexCoord2F(idx_vert.Uv.X, idx_vert.Uv.Y);
             Raylib.RlVertex2F(idx_vert.Pos.X, idx_vert.Pos.Y);

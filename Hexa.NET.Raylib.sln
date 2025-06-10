@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexa.NET.Raylib", "Hexa.NET
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generator", "Generator\Generator.csproj", "{F5F03F85-A869-47AC-BA7C-68E5173A5C78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{04BF5F0A-953D-4EEE-A879-D84C3D07443B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleRaylib", "ExampleRaylib\ExampleRaylib.csproj", "{04BF5F0A-953D-4EEE-A879-D84C3D07443B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleImGui", "ExampleImGui\ExampleImGui.csproj", "{EF72C03C-F3CA-49DC-9A7E-374956B83341}"
 EndProject

@@ -1,17 +1,16 @@
-﻿namespace ExampleFramework.ImGuiDemo
-{
-    using ExampleImGui;
-    using Hexa.NET.ImGui;
-    using Hexa.NET.ImGuizmo;
-    using Hexa.NET.ImNodes;
-    using Hexa.NET.ImPlot;
-    using System.Numerics;
+﻿using System.Numerics;
+using Hexa.NET.ImGui;
+using Hexa.NET.ImGuizmo;
+using Hexa.NET.ImNodes;
+using Hexa.NET.ImPlot;
 
+namespace ExampleImGui
+{
     public class ImGuiManager
     {
-        private ImGuiContextPtr guiContext;
-        private ImNodesContextPtr nodesContext;
-        private ImPlotContextPtr plotContext;
+        private readonly ImGuiContextPtr guiContext;
+        private readonly ImNodesContextPtr nodesContext;
+        private readonly ImPlotContextPtr plotContext;
 
         public unsafe ImGuiManager()
         {
@@ -167,13 +166,11 @@
             ImGui.NewFrame();
             ImGuizmo.BeginFrame(); // mandatory for ImGuizmo
 
-            // Example for getting the central dockspace id of a window/viewport.
+            // ExampleRaylib for getting the central dockspace id of a window/viewport.
             ImGui.PushStyleColor(ImGuiCol.WindowBg, Vector4.Zero);
-            DockSpaceId = ImGui.DockSpaceOverViewport(null, ImGuiDockNodeFlags.PassthruCentralNode, null); // passing null as first argument will use the main viewport
+            ImGui.DockSpaceOverViewport(null, ImGuiDockNodeFlags.PassthruCentralNode, null); // passing null as first argument will use the main viewport
             ImGui.PopStyleColor(1);
         }
-
-        public static uint DockSpaceId { get; private set; }
 
         public unsafe void EndFrame()
         {
