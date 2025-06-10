@@ -11,12 +11,12 @@
         private static ImGuiMouseCursor CurrentMouseCursor = ImGuiMouseCursor.Count;
         private static readonly MouseCursor[] MouseCursorMap = new MouseCursor[(int)ImGuiMouseCursor.Count];
 
-        private static bool LastFrameFocused = false;
+        private static bool LastFrameFocused;
 
-        private static bool LastControlPressed = false;
-        private static bool LastShiftPressed = false;
-        private static bool LastAltPressed = false;
-        private static bool LastSuperPressed = false;
+        private static bool LastControlPressed;
+        private static bool LastShiftPressed;
+        private static bool LastAltPressed;
+        private static bool LastSuperPressed;
 
         // internal only functions
         private static bool RlImGuiIsControlDown()

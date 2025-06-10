@@ -146,7 +146,7 @@
             ImGuiRaylibPlatform.Init();
         }
 
-        public unsafe void NewFrame()
+        public void NewFrame()
         {
             // Set ImGui context
             ImGui.SetCurrentContext(guiContext);
@@ -174,8 +174,6 @@
         }
 
         public static uint DockSpaceId { get; private set; }
-
-        public event Action OnRenderDrawData;
 
         public unsafe void EndFrame()
         {
