@@ -10,7 +10,7 @@
 
 		<PackageId>CodeBro.Hexa.NET.Raylib</PackageId>
 		<AssemblyVersion>5.6.0</AssemblyVersion>
-		<PackageVersion>1.0.0</PackageVersion>
+		<PackageVersion>1.0.1</PackageVersion>
 		<Description>A .NET Wrapper for Raylib (v 5.6.dev for those who want to stay up2date when it comes to raylib-updates);
 					 generated with the HexaGen code generator.HexaGen allows users
 					 to access native libraries easily and with high performance. This is a fork from the original 'Hexa.Net.Raylib' created and maintained by 'Juna Meinhold'.
