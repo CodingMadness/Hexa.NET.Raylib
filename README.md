@@ -1,6 +1,8 @@
 # Hexa.NET.Raylib
 
-Hexa.NET.Raylib is a minimal C# wrapper for the (current master branch) of Raylib library, providing a thin, 1:1 binding to Raylib's C functions. This wrapper is designed for developers who need direct access to the Raylib library's functionality from C#, without added complexity or overhead.
+A .NET Wrapper for Raylib (v 5.6.dev for those who want to stay up2date when it comes to raylib-updates);
+generated with the HexaGen code generator.HexaGen allows users to access native libraries easily and with high performance.
+This is a fork from the original 'Hexa.Net.Raylib' created and maintained by 'Juna Meinhold'
 
 ## Features
 
