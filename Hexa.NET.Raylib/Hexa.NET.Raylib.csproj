@@ -8,7 +8,7 @@
 
 		<LangVersion>12</LangVersion>
 
-		<PackageId>Hexa.NET.Raylib</PackageId>
+		<PackageId>CodeBro.Hexa.NET.Raylib</PackageId>
 		<AssemblyVersion>5.6.0</AssemblyVersion>
 		<PackageVersion>1.0.0</PackageVersion>
 		<Description>A .NET Wrapper for Raylib (v 5.6.dev for those who want to stay up2date when it comes to raylib-updates);
@@ -23,7 +23,7 @@
 		<RepositoryType>git</RepositoryType>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-
+		<Product>C# Raylib-Wrapper</Product>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<NoWarn>$(NoWarn);1591</NoWarn>
 
