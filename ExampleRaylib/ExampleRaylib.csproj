@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Hexa.NET.Raylib\Hexa.NET.Raylib.csproj" />
+    <PackageReference Include="CodeBro.Hexa.NET.Raylib" Version="1.0.2" />
   </ItemGroup>
 
 </Project>
