@@ -3957,7 +3957,7 @@ namespace Hexa.NET.Raylib
 		[NativeName(NativeNameType.Func, "SaveFileText")]
 		[return: NativeName(NativeNameType.Type, "bool")]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal static byte SaveFileTextNative([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] byte* fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char const *")] byte* text)
+		internal static byte SaveFileTextNative([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] byte* fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char *")] byte* text)
 		{
 			#if NET5_0_OR_GREATER
 			return ((delegate* unmanaged[Cdecl]<byte*, byte*, byte>)funcTable[122])(fileName, text);
@@ -3968,7 +3968,7 @@ namespace Hexa.NET.Raylib
 
 		[NativeName(NativeNameType.Func, "SaveFileText")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public static bool SaveFileText([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] byte* fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char const *")] byte* text)
+		public static bool SaveFileText([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] byte* fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char *")] byte* text)
 		{
 			byte ret = SaveFileTextNative(fileName, text);
 			return ret != 0;
@@ -3976,7 +3976,7 @@ namespace Hexa.NET.Raylib
 
 		[NativeName(NativeNameType.Func, "SaveFileText")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public static bool SaveFileText([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] ref byte fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char const *")] byte* text)
+		public static bool SaveFileText([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] ref byte fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char *")] byte* text)
 		{
 			fixed (byte* pfileName = &fileName)
 			{
@@ -3987,7 +3987,7 @@ namespace Hexa.NET.Raylib
 
 		[NativeName(NativeNameType.Func, "SaveFileText")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public static bool SaveFileText([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char const *")] byte* text)
+		public static bool SaveFileText([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char *")] byte* text)
 		{
 			fixed (byte* pfileName = fileName)
 			{
@@ -3998,7 +3998,7 @@ namespace Hexa.NET.Raylib
 
 		[NativeName(NativeNameType.Func, "SaveFileText")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public static bool SaveFileText([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] string fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char const *")] byte* text)
+		public static bool SaveFileText([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] string fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char *")] byte* text)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -4027,7 +4027,7 @@ namespace Hexa.NET.Raylib
 
 		[NativeName(NativeNameType.Func, "SaveFileText")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public static bool SaveFileText([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] byte* fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char const *")] ref byte text)
+		public static bool SaveFileText([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] byte* fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char *")] ref byte text)
 		{
 			fixed (byte* ptext = &text)
 			{
@@ -4038,18 +4038,7 @@ namespace Hexa.NET.Raylib
 
 		[NativeName(NativeNameType.Func, "SaveFileText")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public static bool SaveFileText([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] byte* fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> text)
-		{
-			fixed (byte* ptext = text)
-			{
-				byte ret = SaveFileTextNative(fileName, (byte*)ptext);
-				return ret != 0;
-			}
-		}
-
-		[NativeName(NativeNameType.Func, "SaveFileText")]
-		[return: NativeName(NativeNameType.Type, "bool")]
-		public static bool SaveFileText([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] byte* fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char const *")] string text)
+		public static bool SaveFileText([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] byte* fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char *")] ref string text)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -4069,6 +4058,7 @@ namespace Hexa.NET.Raylib
 				pStr0[pStrOffset0] = 0;
 			}
 			byte ret = SaveFileTextNative(fileName, pStr0);
+			text = Utils.DecodeStringUTF8(pStr0);
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -4078,7 +4068,7 @@ namespace Hexa.NET.Raylib
 
 		[NativeName(NativeNameType.Func, "SaveFileText")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public static bool SaveFileText([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] ref byte fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char const *")] ref byte text)
+		public static bool SaveFileText([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] ref byte fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char *")] ref byte text)
 		{
 			fixed (byte* pfileName = &fileName)
 			{
@@ -4092,11 +4082,11 @@ namespace Hexa.NET.Raylib
 
 		[NativeName(NativeNameType.Func, "SaveFileText")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public static bool SaveFileText([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> text)
+		public static bool SaveFileText([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char *")] ref byte text)
 		{
 			fixed (byte* pfileName = fileName)
 			{
-				fixed (byte* ptext = text)
+				fixed (byte* ptext = &text)
 				{
 					byte ret = SaveFileTextNative((byte*)pfileName, (byte*)ptext);
 					return ret != 0;
@@ -4106,7 +4096,7 @@ namespace Hexa.NET.Raylib
 
 		[NativeName(NativeNameType.Func, "SaveFileText")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public static bool SaveFileText([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] string fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char const *")] string text)
+		public static bool SaveFileText([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] string fileName, [NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char *")] ref string text)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -4143,6 +4133,7 @@ namespace Hexa.NET.Raylib
 				pStr1[pStrOffset1] = 0;
 			}
 			byte ret = SaveFileTextNative(pStr0, pStr1);
+			text = Utils.DecodeStringUTF8(pStr1);
 			if (pStrSize1 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr1);
@@ -5018,6 +5009,17 @@ namespace Hexa.NET.Raylib
 			fixed (byte* pfilePath = &filePath)
 			{
 				string ret = Utils.DecodeStringUTF8(GetDirectoryPathNative((byte*)pfilePath));
+				return ret;
+			}
+		}
+
+		[NativeName(NativeNameType.Func, "GetDirectoryPath")]
+		[return: NativeName(NativeNameType.Type, "char const *")]
+		public static byte* GetDirectoryPath([NativeName(NativeNameType.Param, "filePath")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> filePath)
+		{
+			fixed (byte* pfilePath = filePath)
+			{
+				byte* ret = GetDirectoryPathNative((byte*)pfilePath);
 				return ret;
 			}
 		}

@@ -51,7 +51,6 @@ namespace Hexa.NET.Raylib
 		[NativeName(NativeNameType.Type, "unsigned char")]
 		public byte A;
 
-
 		public unsafe Color(byte r = default, byte g = default, byte b = default, byte a = default)
 		{
 			R = r;
@@ -59,8 +58,5 @@ namespace Hexa.NET.Raylib
 			B = b;
 			A = a;
 		}
-
-
 	}
-
 }

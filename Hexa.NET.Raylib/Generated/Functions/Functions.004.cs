@@ -18,242 +18,15 @@ namespace Hexa.NET.Raylib
 	public unsafe partial class Raylib
 	{
 
-		[NativeName(NativeNameType.Func, "DrawCylinderWires")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void DrawCylinderWires([NativeName(NativeNameType.Param, "position")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 position, [NativeName(NativeNameType.Param, "radiusTop")] [NativeName(NativeNameType.Type, "float")] float radiusTop, [NativeName(NativeNameType.Param, "radiusBottom")] [NativeName(NativeNameType.Type, "float")] float radiusBottom, [NativeName(NativeNameType.Param, "height")] [NativeName(NativeNameType.Type, "float")] float height, [NativeName(NativeNameType.Param, "slices")] [NativeName(NativeNameType.Type, "int")] int slices, [NativeName(NativeNameType.Param, "color")] [NativeName(NativeNameType.Type, "Color")] Color color)
-		{
-			DrawCylinderWiresNative(position, radiusTop, radiusBottom, height, slices, color);
-		}
-
-		[NativeName(NativeNameType.Func, "DrawCylinderWiresEx")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal static void DrawCylinderWiresExNative([NativeName(NativeNameType.Param, "startPos")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 startPos, [NativeName(NativeNameType.Param, "endPos")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 endPos, [NativeName(NativeNameType.Param, "startRadius")] [NativeName(NativeNameType.Type, "float")] float startRadius, [NativeName(NativeNameType.Param, "endRadius")] [NativeName(NativeNameType.Type, "float")] float endRadius, [NativeName(NativeNameType.Param, "sides")] [NativeName(NativeNameType.Type, "int")] int sides, [NativeName(NativeNameType.Param, "color")] [NativeName(NativeNameType.Type, "Color")] Color color)
-		{
-			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Vector3, Vector3, float, float, int, Color, void>)funcTable[456])(startPos, endPos, startRadius, endRadius, sides, color);
-			#else
-			((delegate* unmanaged[Cdecl]<Vector3, Vector3, float, float, int, Color, void>)funcTable[456])(startPos, endPos, startRadius, endRadius, sides, color);
-			#endif
-		}
-
-		[NativeName(NativeNameType.Func, "DrawCylinderWiresEx")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void DrawCylinderWiresEx([NativeName(NativeNameType.Param, "startPos")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 startPos, [NativeName(NativeNameType.Param, "endPos")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 endPos, [NativeName(NativeNameType.Param, "startRadius")] [NativeName(NativeNameType.Type, "float")] float startRadius, [NativeName(NativeNameType.Param, "endRadius")] [NativeName(NativeNameType.Type, "float")] float endRadius, [NativeName(NativeNameType.Param, "sides")] [NativeName(NativeNameType.Type, "int")] int sides, [NativeName(NativeNameType.Param, "color")] [NativeName(NativeNameType.Type, "Color")] Color color)
-		{
-			DrawCylinderWiresExNative(startPos, endPos, startRadius, endRadius, sides, color);
-		}
-
-		[NativeName(NativeNameType.Func, "DrawCapsule")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal static void DrawCapsuleNative([NativeName(NativeNameType.Param, "startPos")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 startPos, [NativeName(NativeNameType.Param, "endPos")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 endPos, [NativeName(NativeNameType.Param, "radius")] [NativeName(NativeNameType.Type, "float")] float radius, [NativeName(NativeNameType.Param, "slices")] [NativeName(NativeNameType.Type, "int")] int slices, [NativeName(NativeNameType.Param, "rings")] [NativeName(NativeNameType.Type, "int")] int rings, [NativeName(NativeNameType.Param, "color")] [NativeName(NativeNameType.Type, "Color")] Color color)
-		{
-			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Vector3, Vector3, float, int, int, Color, void>)funcTable[457])(startPos, endPos, radius, slices, rings, color);
-			#else
-			((delegate* unmanaged[Cdecl]<Vector3, Vector3, float, int, int, Color, void>)funcTable[457])(startPos, endPos, radius, slices, rings, color);
-			#endif
-		}
-
-		[NativeName(NativeNameType.Func, "DrawCapsule")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void DrawCapsule([NativeName(NativeNameType.Param, "startPos")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 startPos, [NativeName(NativeNameType.Param, "endPos")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 endPos, [NativeName(NativeNameType.Param, "radius")] [NativeName(NativeNameType.Type, "float")] float radius, [NativeName(NativeNameType.Param, "slices")] [NativeName(NativeNameType.Type, "int")] int slices, [NativeName(NativeNameType.Param, "rings")] [NativeName(NativeNameType.Type, "int")] int rings, [NativeName(NativeNameType.Param, "color")] [NativeName(NativeNameType.Type, "Color")] Color color)
-		{
-			DrawCapsuleNative(startPos, endPos, radius, slices, rings, color);
-		}
-
-		[NativeName(NativeNameType.Func, "DrawCapsuleWires")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal static void DrawCapsuleWiresNative([NativeName(NativeNameType.Param, "startPos")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 startPos, [NativeName(NativeNameType.Param, "endPos")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 endPos, [NativeName(NativeNameType.Param, "radius")] [NativeName(NativeNameType.Type, "float")] float radius, [NativeName(NativeNameType.Param, "slices")] [NativeName(NativeNameType.Type, "int")] int slices, [NativeName(NativeNameType.Param, "rings")] [NativeName(NativeNameType.Type, "int")] int rings, [NativeName(NativeNameType.Param, "color")] [NativeName(NativeNameType.Type, "Color")] Color color)
-		{
-			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Vector3, Vector3, float, int, int, Color, void>)funcTable[458])(startPos, endPos, radius, slices, rings, color);
-			#else
-			((delegate* unmanaged[Cdecl]<Vector3, Vector3, float, int, int, Color, void>)funcTable[458])(startPos, endPos, radius, slices, rings, color);
-			#endif
-		}
-
-		[NativeName(NativeNameType.Func, "DrawCapsuleWires")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void DrawCapsuleWires([NativeName(NativeNameType.Param, "startPos")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 startPos, [NativeName(NativeNameType.Param, "endPos")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 endPos, [NativeName(NativeNameType.Param, "radius")] [NativeName(NativeNameType.Type, "float")] float radius, [NativeName(NativeNameType.Param, "slices")] [NativeName(NativeNameType.Type, "int")] int slices, [NativeName(NativeNameType.Param, "rings")] [NativeName(NativeNameType.Type, "int")] int rings, [NativeName(NativeNameType.Param, "color")] [NativeName(NativeNameType.Type, "Color")] Color color)
-		{
-			DrawCapsuleWiresNative(startPos, endPos, radius, slices, rings, color);
-		}
-
-		[NativeName(NativeNameType.Func, "DrawPlane")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal static void DrawPlaneNative([NativeName(NativeNameType.Param, "centerPos")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 centerPos, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "Vector2")] Vector2 size, [NativeName(NativeNameType.Param, "color")] [NativeName(NativeNameType.Type, "Color")] Color color)
-		{
-			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Vector3, Vector2, Color, void>)funcTable[459])(centerPos, size, color);
-			#else
-			((delegate* unmanaged[Cdecl]<Vector3, Vector2, Color, void>)funcTable[459])(centerPos, size, color);
-			#endif
-		}
-
-		[NativeName(NativeNameType.Func, "DrawPlane")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void DrawPlane([NativeName(NativeNameType.Param, "centerPos")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 centerPos, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "Vector2")] Vector2 size, [NativeName(NativeNameType.Param, "color")] [NativeName(NativeNameType.Type, "Color")] Color color)
-		{
-			DrawPlaneNative(centerPos, size, color);
-		}
-
-		[NativeName(NativeNameType.Func, "DrawRay")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal static void DrawRayNative([NativeName(NativeNameType.Param, "ray")] [NativeName(NativeNameType.Type, "Ray")] Ray ray, [NativeName(NativeNameType.Param, "color")] [NativeName(NativeNameType.Type, "Color")] Color color)
-		{
-			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Ray, Color, void>)funcTable[460])(ray, color);
-			#else
-			((delegate* unmanaged[Cdecl]<Ray, Color, void>)funcTable[460])(ray, color);
-			#endif
-		}
-
-		[NativeName(NativeNameType.Func, "DrawRay")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void DrawRay([NativeName(NativeNameType.Param, "ray")] [NativeName(NativeNameType.Type, "Ray")] Ray ray, [NativeName(NativeNameType.Param, "color")] [NativeName(NativeNameType.Type, "Color")] Color color)
-		{
-			DrawRayNative(ray, color);
-		}
-
-		[NativeName(NativeNameType.Func, "DrawGrid")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal static void DrawGridNative([NativeName(NativeNameType.Param, "slices")] [NativeName(NativeNameType.Type, "int")] int slices, [NativeName(NativeNameType.Param, "spacing")] [NativeName(NativeNameType.Type, "float")] float spacing)
-		{
-			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<int, float, void>)funcTable[461])(slices, spacing);
-			#else
-			((delegate* unmanaged[Cdecl]<int, float, void>)funcTable[461])(slices, spacing);
-			#endif
-		}
-
-		[NativeName(NativeNameType.Func, "DrawGrid")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void DrawGrid([NativeName(NativeNameType.Param, "slices")] [NativeName(NativeNameType.Type, "int")] int slices, [NativeName(NativeNameType.Param, "spacing")] [NativeName(NativeNameType.Type, "float")] float spacing)
-		{
-			DrawGridNative(slices, spacing);
-		}
-
-		/// <summary>
-		/// Model management functions<br/>
-		/// </summary>
-		[NativeName(NativeNameType.Func, "LoadModel")]
-		[return: NativeName(NativeNameType.Type, "Model")]
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal static Model LoadModelNative([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] byte* fileName)
-		{
-			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<byte*, Model>)funcTable[462])(fileName);
-			#else
-			return (Model)((delegate* unmanaged[Cdecl]<nint, Model>)funcTable[462])((nint)fileName);
-			#endif
-		}
-
-		/// <summary>
-		/// Model management functions<br/>
-		/// </summary>
-		[NativeName(NativeNameType.Func, "LoadModel")]
-		[return: NativeName(NativeNameType.Type, "Model")]
-		public static Model LoadModel([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] byte* fileName)
-		{
-			Model ret = LoadModelNative(fileName);
-			return ret;
-		}
-
-		/// <summary>
-		/// Model management functions<br/>
-		/// </summary>
-		[NativeName(NativeNameType.Func, "LoadModel")]
-		[return: NativeName(NativeNameType.Type, "Model")]
-		public static Model LoadModel([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] ref byte fileName)
-		{
-			fixed (byte* pfileName = &fileName)
-			{
-				Model ret = LoadModelNative((byte*)pfileName);
-				return ret;
-			}
-		}
-
-		/// <summary>
-		/// Model management functions<br/>
-		/// </summary>
-		[NativeName(NativeNameType.Func, "LoadModel")]
-		[return: NativeName(NativeNameType.Type, "Model")]
-		public static Model LoadModel([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> fileName)
-		{
-			fixed (byte* pfileName = fileName)
-			{
-				Model ret = LoadModelNative((byte*)pfileName);
-				return ret;
-			}
-		}
-
-		/// <summary>
-		/// Model management functions<br/>
-		/// </summary>
-		[NativeName(NativeNameType.Func, "LoadModel")]
-		[return: NativeName(NativeNameType.Type, "Model")]
-		public static Model LoadModel([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] string fileName)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (fileName != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(fileName);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(fileName, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			Model ret = LoadModelNative(pStr0);
-			if (pStrSize0 >= Utils.MaxStackallocSize)
-			{
-				Utils.Free(pStr0);
-			}
-			return ret;
-		}
-
-		[NativeName(NativeNameType.Func, "LoadModelFromMesh")]
-		[return: NativeName(NativeNameType.Type, "Model")]
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal static Model LoadModelFromMeshNative([NativeName(NativeNameType.Param, "mesh")] [NativeName(NativeNameType.Type, "Mesh")] Mesh mesh)
-		{
-			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Mesh, Model>)funcTable[463])(mesh);
-			#else
-			return (Model)((delegate* unmanaged[Cdecl]<Mesh, Model>)funcTable[463])(mesh);
-			#endif
-		}
-
-		[NativeName(NativeNameType.Func, "LoadModelFromMesh")]
-		[return: NativeName(NativeNameType.Type, "Model")]
-		public static Model LoadModelFromMesh([NativeName(NativeNameType.Param, "mesh")] [NativeName(NativeNameType.Type, "Mesh")] Mesh mesh)
-		{
-			Model ret = LoadModelFromMeshNative(mesh);
-			return ret;
-		}
-
 		[NativeName(NativeNameType.Func, "IsModelValid")]
 		[return: NativeName(NativeNameType.Type, "bool")]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		internal static byte IsModelValidNative([NativeName(NativeNameType.Param, "model")] [NativeName(NativeNameType.Type, "Model")] Model model)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Model, byte>)funcTable[464])(model);
+			return ((delegate* unmanaged[Cdecl]<Model, byte>)funcTable[461])(model);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<Model, byte>)funcTable[464])(model);
+			return (byte)((delegate* unmanaged[Cdecl]<Model, byte>)funcTable[461])(model);
 			#endif
 		}
 
@@ -271,9 +44,9 @@ namespace Hexa.NET.Raylib
 		internal static void UnloadModelNative([NativeName(NativeNameType.Param, "model")] [NativeName(NativeNameType.Type, "Model")] Model model)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Model, void>)funcTable[465])(model);
+			((delegate* unmanaged[Cdecl]<Model, void>)funcTable[462])(model);
 			#else
-			((delegate* unmanaged[Cdecl]<Model, void>)funcTable[465])(model);
+			((delegate* unmanaged[Cdecl]<Model, void>)funcTable[462])(model);
 			#endif
 		}
 
@@ -290,9 +63,9 @@ namespace Hexa.NET.Raylib
 		internal static BoundingBox GetModelBoundingBoxNative([NativeName(NativeNameType.Param, "model")] [NativeName(NativeNameType.Type, "Model")] Model model)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Model, BoundingBox>)funcTable[466])(model);
+			return ((delegate* unmanaged[Cdecl]<Model, BoundingBox>)funcTable[463])(model);
 			#else
-			return (BoundingBox)((delegate* unmanaged[Cdecl]<Model, BoundingBox>)funcTable[466])(model);
+			return (BoundingBox)((delegate* unmanaged[Cdecl]<Model, BoundingBox>)funcTable[463])(model);
 			#endif
 		}
 
@@ -313,9 +86,9 @@ namespace Hexa.NET.Raylib
 		internal static void DrawModelNative([NativeName(NativeNameType.Param, "model")] [NativeName(NativeNameType.Type, "Model")] Model model, [NativeName(NativeNameType.Param, "position")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 position, [NativeName(NativeNameType.Param, "scale")] [NativeName(NativeNameType.Type, "float")] float scale, [NativeName(NativeNameType.Param, "tint")] [NativeName(NativeNameType.Type, "Color")] Color tint)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Model, Vector3, float, Color, void>)funcTable[467])(model, position, scale, tint);
+			((delegate* unmanaged[Cdecl]<Model, Vector3, float, Color, void>)funcTable[464])(model, position, scale, tint);
 			#else
-			((delegate* unmanaged[Cdecl]<Model, Vector3, float, Color, void>)funcTable[467])(model, position, scale, tint);
+			((delegate* unmanaged[Cdecl]<Model, Vector3, float, Color, void>)funcTable[464])(model, position, scale, tint);
 			#endif
 		}
 
@@ -335,9 +108,9 @@ namespace Hexa.NET.Raylib
 		internal static void DrawModelExNative([NativeName(NativeNameType.Param, "model")] [NativeName(NativeNameType.Type, "Model")] Model model, [NativeName(NativeNameType.Param, "position")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 position, [NativeName(NativeNameType.Param, "rotationAxis")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 rotationAxis, [NativeName(NativeNameType.Param, "rotationAngle")] [NativeName(NativeNameType.Type, "float")] float rotationAngle, [NativeName(NativeNameType.Param, "scale")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 scale, [NativeName(NativeNameType.Param, "tint")] [NativeName(NativeNameType.Type, "Color")] Color tint)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Model, Vector3, Vector3, float, Vector3, Color, void>)funcTable[468])(model, position, rotationAxis, rotationAngle, scale, tint);
+			((delegate* unmanaged[Cdecl]<Model, Vector3, Vector3, float, Vector3, Color, void>)funcTable[465])(model, position, rotationAxis, rotationAngle, scale, tint);
 			#else
-			((delegate* unmanaged[Cdecl]<Model, Vector3, Vector3, float, Vector3, Color, void>)funcTable[468])(model, position, rotationAxis, rotationAngle, scale, tint);
+			((delegate* unmanaged[Cdecl]<Model, Vector3, Vector3, float, Vector3, Color, void>)funcTable[465])(model, position, rotationAxis, rotationAngle, scale, tint);
 			#endif
 		}
 
@@ -354,9 +127,9 @@ namespace Hexa.NET.Raylib
 		internal static void DrawModelWiresNative([NativeName(NativeNameType.Param, "model")] [NativeName(NativeNameType.Type, "Model")] Model model, [NativeName(NativeNameType.Param, "position")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 position, [NativeName(NativeNameType.Param, "scale")] [NativeName(NativeNameType.Type, "float")] float scale, [NativeName(NativeNameType.Param, "tint")] [NativeName(NativeNameType.Type, "Color")] Color tint)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Model, Vector3, float, Color, void>)funcTable[469])(model, position, scale, tint);
+			((delegate* unmanaged[Cdecl]<Model, Vector3, float, Color, void>)funcTable[466])(model, position, scale, tint);
 			#else
-			((delegate* unmanaged[Cdecl]<Model, Vector3, float, Color, void>)funcTable[469])(model, position, scale, tint);
+			((delegate* unmanaged[Cdecl]<Model, Vector3, float, Color, void>)funcTable[466])(model, position, scale, tint);
 			#endif
 		}
 
@@ -373,9 +146,9 @@ namespace Hexa.NET.Raylib
 		internal static void DrawModelWiresExNative([NativeName(NativeNameType.Param, "model")] [NativeName(NativeNameType.Type, "Model")] Model model, [NativeName(NativeNameType.Param, "position")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 position, [NativeName(NativeNameType.Param, "rotationAxis")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 rotationAxis, [NativeName(NativeNameType.Param, "rotationAngle")] [NativeName(NativeNameType.Type, "float")] float rotationAngle, [NativeName(NativeNameType.Param, "scale")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 scale, [NativeName(NativeNameType.Param, "tint")] [NativeName(NativeNameType.Type, "Color")] Color tint)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Model, Vector3, Vector3, float, Vector3, Color, void>)funcTable[470])(model, position, rotationAxis, rotationAngle, scale, tint);
+			((delegate* unmanaged[Cdecl]<Model, Vector3, Vector3, float, Vector3, Color, void>)funcTable[467])(model, position, rotationAxis, rotationAngle, scale, tint);
 			#else
-			((delegate* unmanaged[Cdecl]<Model, Vector3, Vector3, float, Vector3, Color, void>)funcTable[470])(model, position, rotationAxis, rotationAngle, scale, tint);
+			((delegate* unmanaged[Cdecl]<Model, Vector3, Vector3, float, Vector3, Color, void>)funcTable[467])(model, position, rotationAxis, rotationAngle, scale, tint);
 			#endif
 		}
 
@@ -392,9 +165,9 @@ namespace Hexa.NET.Raylib
 		internal static void DrawModelPointsNative([NativeName(NativeNameType.Param, "model")] [NativeName(NativeNameType.Type, "Model")] Model model, [NativeName(NativeNameType.Param, "position")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 position, [NativeName(NativeNameType.Param, "scale")] [NativeName(NativeNameType.Type, "float")] float scale, [NativeName(NativeNameType.Param, "tint")] [NativeName(NativeNameType.Type, "Color")] Color tint)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Model, Vector3, float, Color, void>)funcTable[471])(model, position, scale, tint);
+			((delegate* unmanaged[Cdecl]<Model, Vector3, float, Color, void>)funcTable[468])(model, position, scale, tint);
 			#else
-			((delegate* unmanaged[Cdecl]<Model, Vector3, float, Color, void>)funcTable[471])(model, position, scale, tint);
+			((delegate* unmanaged[Cdecl]<Model, Vector3, float, Color, void>)funcTable[468])(model, position, scale, tint);
 			#endif
 		}
 
@@ -411,9 +184,9 @@ namespace Hexa.NET.Raylib
 		internal static void DrawModelPointsExNative([NativeName(NativeNameType.Param, "model")] [NativeName(NativeNameType.Type, "Model")] Model model, [NativeName(NativeNameType.Param, "position")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 position, [NativeName(NativeNameType.Param, "rotationAxis")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 rotationAxis, [NativeName(NativeNameType.Param, "rotationAngle")] [NativeName(NativeNameType.Type, "float")] float rotationAngle, [NativeName(NativeNameType.Param, "scale")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 scale, [NativeName(NativeNameType.Param, "tint")] [NativeName(NativeNameType.Type, "Color")] Color tint)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Model, Vector3, Vector3, float, Vector3, Color, void>)funcTable[472])(model, position, rotationAxis, rotationAngle, scale, tint);
+			((delegate* unmanaged[Cdecl]<Model, Vector3, Vector3, float, Vector3, Color, void>)funcTable[469])(model, position, rotationAxis, rotationAngle, scale, tint);
 			#else
-			((delegate* unmanaged[Cdecl]<Model, Vector3, Vector3, float, Vector3, Color, void>)funcTable[472])(model, position, rotationAxis, rotationAngle, scale, tint);
+			((delegate* unmanaged[Cdecl]<Model, Vector3, Vector3, float, Vector3, Color, void>)funcTable[469])(model, position, rotationAxis, rotationAngle, scale, tint);
 			#endif
 		}
 
@@ -430,9 +203,9 @@ namespace Hexa.NET.Raylib
 		internal static void DrawBoundingBoxNative([NativeName(NativeNameType.Param, "box")] [NativeName(NativeNameType.Type, "BoundingBox")] BoundingBox box, [NativeName(NativeNameType.Param, "color")] [NativeName(NativeNameType.Type, "Color")] Color color)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<BoundingBox, Color, void>)funcTable[473])(box, color);
+			((delegate* unmanaged[Cdecl]<BoundingBox, Color, void>)funcTable[470])(box, color);
 			#else
-			((delegate* unmanaged[Cdecl]<BoundingBox, Color, void>)funcTable[473])(box, color);
+			((delegate* unmanaged[Cdecl]<BoundingBox, Color, void>)funcTable[470])(box, color);
 			#endif
 		}
 
@@ -449,9 +222,9 @@ namespace Hexa.NET.Raylib
 		internal static void DrawBillboardNative([NativeName(NativeNameType.Param, "camera")] [NativeName(NativeNameType.Type, "Camera")] Camera3D camera, [NativeName(NativeNameType.Param, "texture")] [NativeName(NativeNameType.Type, "Texture2D")] Texture texture, [NativeName(NativeNameType.Param, "position")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 position, [NativeName(NativeNameType.Param, "scale")] [NativeName(NativeNameType.Type, "float")] float scale, [NativeName(NativeNameType.Param, "tint")] [NativeName(NativeNameType.Type, "Color")] Color tint)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Camera3D, Texture, Vector3, float, Color, void>)funcTable[474])(camera, texture, position, scale, tint);
+			((delegate* unmanaged[Cdecl]<Camera3D, Texture, Vector3, float, Color, void>)funcTable[471])(camera, texture, position, scale, tint);
 			#else
-			((delegate* unmanaged[Cdecl]<Camera3D, Texture, Vector3, float, Color, void>)funcTable[474])(camera, texture, position, scale, tint);
+			((delegate* unmanaged[Cdecl]<Camera3D, Texture, Vector3, float, Color, void>)funcTable[471])(camera, texture, position, scale, tint);
 			#endif
 		}
 
@@ -468,9 +241,9 @@ namespace Hexa.NET.Raylib
 		internal static void DrawBillboardRecNative([NativeName(NativeNameType.Param, "camera")] [NativeName(NativeNameType.Type, "Camera")] Camera3D camera, [NativeName(NativeNameType.Param, "texture")] [NativeName(NativeNameType.Type, "Texture2D")] Texture texture, [NativeName(NativeNameType.Param, "source")] [NativeName(NativeNameType.Type, "Rectangle")] Rectangle source, [NativeName(NativeNameType.Param, "position")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 position, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "Vector2")] Vector2 size, [NativeName(NativeNameType.Param, "tint")] [NativeName(NativeNameType.Type, "Color")] Color tint)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Camera3D, Texture, Rectangle, Vector3, Vector2, Color, void>)funcTable[475])(camera, texture, source, position, size, tint);
+			((delegate* unmanaged[Cdecl]<Camera3D, Texture, Rectangle, Vector3, Vector2, Color, void>)funcTable[472])(camera, texture, source, position, size, tint);
 			#else
-			((delegate* unmanaged[Cdecl]<Camera3D, Texture, Rectangle, Vector3, Vector2, Color, void>)funcTable[475])(camera, texture, source, position, size, tint);
+			((delegate* unmanaged[Cdecl]<Camera3D, Texture, Rectangle, Vector3, Vector2, Color, void>)funcTable[472])(camera, texture, source, position, size, tint);
 			#endif
 		}
 
@@ -487,9 +260,9 @@ namespace Hexa.NET.Raylib
 		internal static void DrawBillboardProNative([NativeName(NativeNameType.Param, "camera")] [NativeName(NativeNameType.Type, "Camera")] Camera3D camera, [NativeName(NativeNameType.Param, "texture")] [NativeName(NativeNameType.Type, "Texture2D")] Texture texture, [NativeName(NativeNameType.Param, "source")] [NativeName(NativeNameType.Type, "Rectangle")] Rectangle source, [NativeName(NativeNameType.Param, "position")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 position, [NativeName(NativeNameType.Param, "up")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 up, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "Vector2")] Vector2 size, [NativeName(NativeNameType.Param, "origin")] [NativeName(NativeNameType.Type, "Vector2")] Vector2 origin, [NativeName(NativeNameType.Param, "rotation")] [NativeName(NativeNameType.Type, "float")] float rotation, [NativeName(NativeNameType.Param, "tint")] [NativeName(NativeNameType.Type, "Color")] Color tint)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Camera3D, Texture, Rectangle, Vector3, Vector3, Vector2, Vector2, float, Color, void>)funcTable[476])(camera, texture, source, position, up, size, origin, rotation, tint);
+			((delegate* unmanaged[Cdecl]<Camera3D, Texture, Rectangle, Vector3, Vector3, Vector2, Vector2, float, Color, void>)funcTable[473])(camera, texture, source, position, up, size, origin, rotation, tint);
 			#else
-			((delegate* unmanaged[Cdecl]<Camera3D, Texture, Rectangle, Vector3, Vector3, Vector2, Vector2, float, Color, void>)funcTable[476])(camera, texture, source, position, up, size, origin, rotation, tint);
+			((delegate* unmanaged[Cdecl]<Camera3D, Texture, Rectangle, Vector3, Vector3, Vector2, Vector2, float, Color, void>)funcTable[473])(camera, texture, source, position, up, size, origin, rotation, tint);
 			#endif
 		}
 
@@ -509,9 +282,9 @@ namespace Hexa.NET.Raylib
 		internal static void UploadMeshNative([NativeName(NativeNameType.Param, "mesh")] [NativeName(NativeNameType.Type, "Mesh *")] Mesh* mesh, [NativeName(NativeNameType.Param, "dynamic")] [NativeName(NativeNameType.Type, "bool")] byte dynamic)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Mesh*, byte, void>)funcTable[477])(mesh, dynamic);
+			((delegate* unmanaged[Cdecl]<Mesh*, byte, void>)funcTable[474])(mesh, dynamic);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, byte, void>)funcTable[477])((nint)mesh, dynamic);
+			((delegate* unmanaged[Cdecl]<nint, byte, void>)funcTable[474])((nint)mesh, dynamic);
 			#endif
 		}
 
@@ -544,9 +317,9 @@ namespace Hexa.NET.Raylib
 		internal static void UpdateMeshBufferNative([NativeName(NativeNameType.Param, "mesh")] [NativeName(NativeNameType.Type, "Mesh")] Mesh mesh, [NativeName(NativeNameType.Param, "index")] [NativeName(NativeNameType.Type, "int")] int index, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "void const *")] void* data, [NativeName(NativeNameType.Param, "dataSize")] [NativeName(NativeNameType.Type, "int")] int dataSize, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Mesh, int, void*, int, int, void>)funcTable[478])(mesh, index, data, dataSize, offset);
+			((delegate* unmanaged[Cdecl]<Mesh, int, void*, int, int, void>)funcTable[475])(mesh, index, data, dataSize, offset);
 			#else
-			((delegate* unmanaged[Cdecl]<Mesh, int, nint, int, int, void>)funcTable[478])(mesh, index, (nint)data, dataSize, offset);
+			((delegate* unmanaged[Cdecl]<Mesh, int, nint, int, int, void>)funcTable[475])(mesh, index, (nint)data, dataSize, offset);
 			#endif
 		}
 
@@ -563,9 +336,9 @@ namespace Hexa.NET.Raylib
 		internal static void UnloadMeshNative([NativeName(NativeNameType.Param, "mesh")] [NativeName(NativeNameType.Type, "Mesh")] Mesh mesh)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Mesh, void>)funcTable[479])(mesh);
+			((delegate* unmanaged[Cdecl]<Mesh, void>)funcTable[476])(mesh);
 			#else
-			((delegate* unmanaged[Cdecl]<Mesh, void>)funcTable[479])(mesh);
+			((delegate* unmanaged[Cdecl]<Mesh, void>)funcTable[476])(mesh);
 			#endif
 		}
 
@@ -582,9 +355,9 @@ namespace Hexa.NET.Raylib
 		internal static void DrawMeshNative([NativeName(NativeNameType.Param, "mesh")] [NativeName(NativeNameType.Type, "Mesh")] Mesh mesh, [NativeName(NativeNameType.Param, "material")] [NativeName(NativeNameType.Type, "Material")] Material material, [NativeName(NativeNameType.Param, "transform")] [NativeName(NativeNameType.Type, "Matrix")] Matrix4x4 transform)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Mesh, Material, Matrix4x4, void>)funcTable[480])(mesh, material, transform);
+			((delegate* unmanaged[Cdecl]<Mesh, Material, Matrix4x4, void>)funcTable[477])(mesh, material, transform);
 			#else
-			((delegate* unmanaged[Cdecl]<Mesh, Material, Matrix4x4, void>)funcTable[480])(mesh, material, transform);
+			((delegate* unmanaged[Cdecl]<Mesh, Material, Matrix4x4, void>)funcTable[477])(mesh, material, transform);
 			#endif
 		}
 
@@ -601,9 +374,9 @@ namespace Hexa.NET.Raylib
 		internal static void DrawMeshInstancedNative([NativeName(NativeNameType.Param, "mesh")] [NativeName(NativeNameType.Type, "Mesh")] Mesh mesh, [NativeName(NativeNameType.Param, "material")] [NativeName(NativeNameType.Type, "Material")] Material material, [NativeName(NativeNameType.Param, "transforms")] [NativeName(NativeNameType.Type, "Matrix const *")] Matrix4x4* transforms, [NativeName(NativeNameType.Param, "instances")] [NativeName(NativeNameType.Type, "int")] int instances)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Mesh, Material, Matrix4x4*, int, void>)funcTable[481])(mesh, material, transforms, instances);
+			((delegate* unmanaged[Cdecl]<Mesh, Material, Matrix4x4*, int, void>)funcTable[478])(mesh, material, transforms, instances);
 			#else
-			((delegate* unmanaged[Cdecl]<Mesh, Material, nint, int, void>)funcTable[481])(mesh, material, (nint)transforms, instances);
+			((delegate* unmanaged[Cdecl]<Mesh, Material, nint, int, void>)funcTable[478])(mesh, material, (nint)transforms, instances);
 			#endif
 		}
 
@@ -630,9 +403,9 @@ namespace Hexa.NET.Raylib
 		internal static BoundingBox GetMeshBoundingBoxNative([NativeName(NativeNameType.Param, "mesh")] [NativeName(NativeNameType.Type, "Mesh")] Mesh mesh)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Mesh, BoundingBox>)funcTable[482])(mesh);
+			return ((delegate* unmanaged[Cdecl]<Mesh, BoundingBox>)funcTable[479])(mesh);
 			#else
-			return (BoundingBox)((delegate* unmanaged[Cdecl]<Mesh, BoundingBox>)funcTable[482])(mesh);
+			return (BoundingBox)((delegate* unmanaged[Cdecl]<Mesh, BoundingBox>)funcTable[479])(mesh);
 			#endif
 		}
 
@@ -650,9 +423,9 @@ namespace Hexa.NET.Raylib
 		internal static void GenMeshTangentsNative([NativeName(NativeNameType.Param, "mesh")] [NativeName(NativeNameType.Type, "Mesh *")] Mesh* mesh)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Mesh*, void>)funcTable[483])(mesh);
+			((delegate* unmanaged[Cdecl]<Mesh*, void>)funcTable[480])(mesh);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[483])((nint)mesh);
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[480])((nint)mesh);
 			#endif
 		}
 
@@ -679,9 +452,9 @@ namespace Hexa.NET.Raylib
 		internal static byte ExportMeshNative([NativeName(NativeNameType.Param, "mesh")] [NativeName(NativeNameType.Type, "Mesh")] Mesh mesh, [NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] byte* fileName)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Mesh, byte*, byte>)funcTable[484])(mesh, fileName);
+			return ((delegate* unmanaged[Cdecl]<Mesh, byte*, byte>)funcTable[481])(mesh, fileName);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<Mesh, nint, byte>)funcTable[484])(mesh, (nint)fileName);
+			return (byte)((delegate* unmanaged[Cdecl]<Mesh, nint, byte>)funcTable[481])(mesh, (nint)fileName);
 			#endif
 		}
 
@@ -750,9 +523,9 @@ namespace Hexa.NET.Raylib
 		internal static byte ExportMeshAsCodeNative([NativeName(NativeNameType.Param, "mesh")] [NativeName(NativeNameType.Type, "Mesh")] Mesh mesh, [NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] byte* fileName)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Mesh, byte*, byte>)funcTable[485])(mesh, fileName);
+			return ((delegate* unmanaged[Cdecl]<Mesh, byte*, byte>)funcTable[482])(mesh, fileName);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<Mesh, nint, byte>)funcTable[485])(mesh, (nint)fileName);
+			return (byte)((delegate* unmanaged[Cdecl]<Mesh, nint, byte>)funcTable[482])(mesh, (nint)fileName);
 			#endif
 		}
 
@@ -824,9 +597,9 @@ namespace Hexa.NET.Raylib
 		internal static Mesh GenMeshPolyNative([NativeName(NativeNameType.Param, "sides")] [NativeName(NativeNameType.Type, "int")] int sides, [NativeName(NativeNameType.Param, "radius")] [NativeName(NativeNameType.Type, "float")] float radius)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<int, float, Mesh>)funcTable[486])(sides, radius);
+			return ((delegate* unmanaged[Cdecl]<int, float, Mesh>)funcTable[483])(sides, radius);
 			#else
-			return (Mesh)((delegate* unmanaged[Cdecl]<int, float, Mesh>)funcTable[486])(sides, radius);
+			return (Mesh)((delegate* unmanaged[Cdecl]<int, float, Mesh>)funcTable[483])(sides, radius);
 			#endif
 		}
 
@@ -847,9 +620,9 @@ namespace Hexa.NET.Raylib
 		internal static Mesh GenMeshPlaneNative([NativeName(NativeNameType.Param, "width")] [NativeName(NativeNameType.Type, "float")] float width, [NativeName(NativeNameType.Param, "length")] [NativeName(NativeNameType.Type, "float")] float length, [NativeName(NativeNameType.Param, "resX")] [NativeName(NativeNameType.Type, "int")] int resX, [NativeName(NativeNameType.Param, "resZ")] [NativeName(NativeNameType.Type, "int")] int resZ)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<float, float, int, int, Mesh>)funcTable[487])(width, length, resX, resZ);
+			return ((delegate* unmanaged[Cdecl]<float, float, int, int, Mesh>)funcTable[484])(width, length, resX, resZ);
 			#else
-			return (Mesh)((delegate* unmanaged[Cdecl]<float, float, int, int, Mesh>)funcTable[487])(width, length, resX, resZ);
+			return (Mesh)((delegate* unmanaged[Cdecl]<float, float, int, int, Mesh>)funcTable[484])(width, length, resX, resZ);
 			#endif
 		}
 
@@ -867,9 +640,9 @@ namespace Hexa.NET.Raylib
 		internal static Mesh GenMeshCubeNative([NativeName(NativeNameType.Param, "width")] [NativeName(NativeNameType.Type, "float")] float width, [NativeName(NativeNameType.Param, "height")] [NativeName(NativeNameType.Type, "float")] float height, [NativeName(NativeNameType.Param, "length")] [NativeName(NativeNameType.Type, "float")] float length)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<float, float, float, Mesh>)funcTable[488])(width, height, length);
+			return ((delegate* unmanaged[Cdecl]<float, float, float, Mesh>)funcTable[485])(width, height, length);
 			#else
-			return (Mesh)((delegate* unmanaged[Cdecl]<float, float, float, Mesh>)funcTable[488])(width, height, length);
+			return (Mesh)((delegate* unmanaged[Cdecl]<float, float, float, Mesh>)funcTable[485])(width, height, length);
 			#endif
 		}
 
@@ -887,9 +660,9 @@ namespace Hexa.NET.Raylib
 		internal static Mesh GenMeshSphereNative([NativeName(NativeNameType.Param, "radius")] [NativeName(NativeNameType.Type, "float")] float radius, [NativeName(NativeNameType.Param, "rings")] [NativeName(NativeNameType.Type, "int")] int rings, [NativeName(NativeNameType.Param, "slices")] [NativeName(NativeNameType.Type, "int")] int slices)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<float, int, int, Mesh>)funcTable[489])(radius, rings, slices);
+			return ((delegate* unmanaged[Cdecl]<float, int, int, Mesh>)funcTable[486])(radius, rings, slices);
 			#else
-			return (Mesh)((delegate* unmanaged[Cdecl]<float, int, int, Mesh>)funcTable[489])(radius, rings, slices);
+			return (Mesh)((delegate* unmanaged[Cdecl]<float, int, int, Mesh>)funcTable[486])(radius, rings, slices);
 			#endif
 		}
 
@@ -907,9 +680,9 @@ namespace Hexa.NET.Raylib
 		internal static Mesh GenMeshHemiSphereNative([NativeName(NativeNameType.Param, "radius")] [NativeName(NativeNameType.Type, "float")] float radius, [NativeName(NativeNameType.Param, "rings")] [NativeName(NativeNameType.Type, "int")] int rings, [NativeName(NativeNameType.Param, "slices")] [NativeName(NativeNameType.Type, "int")] int slices)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<float, int, int, Mesh>)funcTable[490])(radius, rings, slices);
+			return ((delegate* unmanaged[Cdecl]<float, int, int, Mesh>)funcTable[487])(radius, rings, slices);
 			#else
-			return (Mesh)((delegate* unmanaged[Cdecl]<float, int, int, Mesh>)funcTable[490])(radius, rings, slices);
+			return (Mesh)((delegate* unmanaged[Cdecl]<float, int, int, Mesh>)funcTable[487])(radius, rings, slices);
 			#endif
 		}
 
@@ -927,9 +700,9 @@ namespace Hexa.NET.Raylib
 		internal static Mesh GenMeshCylinderNative([NativeName(NativeNameType.Param, "radius")] [NativeName(NativeNameType.Type, "float")] float radius, [NativeName(NativeNameType.Param, "height")] [NativeName(NativeNameType.Type, "float")] float height, [NativeName(NativeNameType.Param, "slices")] [NativeName(NativeNameType.Type, "int")] int slices)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<float, float, int, Mesh>)funcTable[491])(radius, height, slices);
+			return ((delegate* unmanaged[Cdecl]<float, float, int, Mesh>)funcTable[488])(radius, height, slices);
 			#else
-			return (Mesh)((delegate* unmanaged[Cdecl]<float, float, int, Mesh>)funcTable[491])(radius, height, slices);
+			return (Mesh)((delegate* unmanaged[Cdecl]<float, float, int, Mesh>)funcTable[488])(radius, height, slices);
 			#endif
 		}
 
@@ -947,9 +720,9 @@ namespace Hexa.NET.Raylib
 		internal static Mesh GenMeshConeNative([NativeName(NativeNameType.Param, "radius")] [NativeName(NativeNameType.Type, "float")] float radius, [NativeName(NativeNameType.Param, "height")] [NativeName(NativeNameType.Type, "float")] float height, [NativeName(NativeNameType.Param, "slices")] [NativeName(NativeNameType.Type, "int")] int slices)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<float, float, int, Mesh>)funcTable[492])(radius, height, slices);
+			return ((delegate* unmanaged[Cdecl]<float, float, int, Mesh>)funcTable[489])(radius, height, slices);
 			#else
-			return (Mesh)((delegate* unmanaged[Cdecl]<float, float, int, Mesh>)funcTable[492])(radius, height, slices);
+			return (Mesh)((delegate* unmanaged[Cdecl]<float, float, int, Mesh>)funcTable[489])(radius, height, slices);
 			#endif
 		}
 
@@ -967,9 +740,9 @@ namespace Hexa.NET.Raylib
 		internal static Mesh GenMeshTorusNative([NativeName(NativeNameType.Param, "radius")] [NativeName(NativeNameType.Type, "float")] float radius, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "float")] float size, [NativeName(NativeNameType.Param, "radSeg")] [NativeName(NativeNameType.Type, "int")] int radSeg, [NativeName(NativeNameType.Param, "sides")] [NativeName(NativeNameType.Type, "int")] int sides)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<float, float, int, int, Mesh>)funcTable[493])(radius, size, radSeg, sides);
+			return ((delegate* unmanaged[Cdecl]<float, float, int, int, Mesh>)funcTable[490])(radius, size, radSeg, sides);
 			#else
-			return (Mesh)((delegate* unmanaged[Cdecl]<float, float, int, int, Mesh>)funcTable[493])(radius, size, radSeg, sides);
+			return (Mesh)((delegate* unmanaged[Cdecl]<float, float, int, int, Mesh>)funcTable[490])(radius, size, radSeg, sides);
 			#endif
 		}
 
@@ -987,9 +760,9 @@ namespace Hexa.NET.Raylib
 		internal static Mesh GenMeshKnotNative([NativeName(NativeNameType.Param, "radius")] [NativeName(NativeNameType.Type, "float")] float radius, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "float")] float size, [NativeName(NativeNameType.Param, "radSeg")] [NativeName(NativeNameType.Type, "int")] int radSeg, [NativeName(NativeNameType.Param, "sides")] [NativeName(NativeNameType.Type, "int")] int sides)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<float, float, int, int, Mesh>)funcTable[494])(radius, size, radSeg, sides);
+			return ((delegate* unmanaged[Cdecl]<float, float, int, int, Mesh>)funcTable[491])(radius, size, radSeg, sides);
 			#else
-			return (Mesh)((delegate* unmanaged[Cdecl]<float, float, int, int, Mesh>)funcTable[494])(radius, size, radSeg, sides);
+			return (Mesh)((delegate* unmanaged[Cdecl]<float, float, int, int, Mesh>)funcTable[491])(radius, size, radSeg, sides);
 			#endif
 		}
 
@@ -1007,9 +780,9 @@ namespace Hexa.NET.Raylib
 		internal static Mesh GenMeshHeightmapNative([NativeName(NativeNameType.Param, "heightmap")] [NativeName(NativeNameType.Type, "Image")] Image heightmap, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 size)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Image, Vector3, Mesh>)funcTable[495])(heightmap, size);
+			return ((delegate* unmanaged[Cdecl]<Image, Vector3, Mesh>)funcTable[492])(heightmap, size);
 			#else
-			return (Mesh)((delegate* unmanaged[Cdecl]<Image, Vector3, Mesh>)funcTable[495])(heightmap, size);
+			return (Mesh)((delegate* unmanaged[Cdecl]<Image, Vector3, Mesh>)funcTable[492])(heightmap, size);
 			#endif
 		}
 
@@ -1027,9 +800,9 @@ namespace Hexa.NET.Raylib
 		internal static Mesh GenMeshCubicmapNative([NativeName(NativeNameType.Param, "cubicmap")] [NativeName(NativeNameType.Type, "Image")] Image cubicmap, [NativeName(NativeNameType.Param, "cubeSize")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 cubeSize)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Image, Vector3, Mesh>)funcTable[496])(cubicmap, cubeSize);
+			return ((delegate* unmanaged[Cdecl]<Image, Vector3, Mesh>)funcTable[493])(cubicmap, cubeSize);
 			#else
-			return (Mesh)((delegate* unmanaged[Cdecl]<Image, Vector3, Mesh>)funcTable[496])(cubicmap, cubeSize);
+			return (Mesh)((delegate* unmanaged[Cdecl]<Image, Vector3, Mesh>)funcTable[493])(cubicmap, cubeSize);
 			#endif
 		}
 
@@ -1050,9 +823,9 @@ namespace Hexa.NET.Raylib
 		internal static Material* LoadMaterialsNative([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] byte* fileName, [NativeName(NativeNameType.Param, "materialCount")] [NativeName(NativeNameType.Type, "int *")] int* materialCount)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<byte*, int*, Material*>)funcTable[497])(fileName, materialCount);
+			return ((delegate* unmanaged[Cdecl]<byte*, int*, Material*>)funcTable[494])(fileName, materialCount);
 			#else
-			return (Material*)((delegate* unmanaged[Cdecl]<nint, nint, nint>)funcTable[497])((nint)fileName, (nint)materialCount);
+			return (Material*)((delegate* unmanaged[Cdecl]<nint, nint, nint>)funcTable[494])((nint)fileName, (nint)materialCount);
 			#endif
 		}
 
@@ -1216,9 +989,9 @@ namespace Hexa.NET.Raylib
 		internal static Material LoadMaterialDefaultNative()
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Material>)funcTable[498])();
+			return ((delegate* unmanaged[Cdecl]<Material>)funcTable[495])();
 			#else
-			return (Material)((delegate* unmanaged[Cdecl]<Material>)funcTable[498])();
+			return (Material)((delegate* unmanaged[Cdecl]<Material>)funcTable[495])();
 			#endif
 		}
 
@@ -1236,9 +1009,9 @@ namespace Hexa.NET.Raylib
 		internal static byte IsMaterialValidNative([NativeName(NativeNameType.Param, "material")] [NativeName(NativeNameType.Type, "Material")] Material material)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Material, byte>)funcTable[499])(material);
+			return ((delegate* unmanaged[Cdecl]<Material, byte>)funcTable[496])(material);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<Material, byte>)funcTable[499])(material);
+			return (byte)((delegate* unmanaged[Cdecl]<Material, byte>)funcTable[496])(material);
 			#endif
 		}
 
@@ -1256,9 +1029,9 @@ namespace Hexa.NET.Raylib
 		internal static void UnloadMaterialNative([NativeName(NativeNameType.Param, "material")] [NativeName(NativeNameType.Type, "Material")] Material material)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Material, void>)funcTable[500])(material);
+			((delegate* unmanaged[Cdecl]<Material, void>)funcTable[497])(material);
 			#else
-			((delegate* unmanaged[Cdecl]<Material, void>)funcTable[500])(material);
+			((delegate* unmanaged[Cdecl]<Material, void>)funcTable[497])(material);
 			#endif
 		}
 
@@ -1275,9 +1048,9 @@ namespace Hexa.NET.Raylib
 		internal static void SetMaterialTextureNative([NativeName(NativeNameType.Param, "material")] [NativeName(NativeNameType.Type, "Material *")] Material* material, [NativeName(NativeNameType.Param, "mapType")] [NativeName(NativeNameType.Type, "int")] int mapType, [NativeName(NativeNameType.Param, "texture")] [NativeName(NativeNameType.Type, "Texture2D")] Texture texture)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Material*, int, Texture, void>)funcTable[501])(material, mapType, texture);
+			((delegate* unmanaged[Cdecl]<Material*, int, Texture, void>)funcTable[498])(material, mapType, texture);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, int, Texture, void>)funcTable[501])((nint)material, mapType, texture);
+			((delegate* unmanaged[Cdecl]<nint, int, Texture, void>)funcTable[498])((nint)material, mapType, texture);
 			#endif
 		}
 
@@ -1304,9 +1077,9 @@ namespace Hexa.NET.Raylib
 		internal static void SetModelMeshMaterialNative([NativeName(NativeNameType.Param, "model")] [NativeName(NativeNameType.Type, "Model *")] Model* model, [NativeName(NativeNameType.Param, "meshId")] [NativeName(NativeNameType.Type, "int")] int meshId, [NativeName(NativeNameType.Param, "materialId")] [NativeName(NativeNameType.Type, "int")] int materialId)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Model*, int, int, void>)funcTable[502])(model, meshId, materialId);
+			((delegate* unmanaged[Cdecl]<Model*, int, int, void>)funcTable[499])(model, meshId, materialId);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, int, int, void>)funcTable[502])((nint)model, meshId, materialId);
+			((delegate* unmanaged[Cdecl]<nint, int, int, void>)funcTable[499])((nint)model, meshId, materialId);
 			#endif
 		}
 
@@ -1336,9 +1109,9 @@ namespace Hexa.NET.Raylib
 		internal static ModelAnimation* LoadModelAnimationsNative([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] byte* fileName, [NativeName(NativeNameType.Param, "animCount")] [NativeName(NativeNameType.Type, "int *")] int* animCount)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<byte*, int*, ModelAnimation*>)funcTable[503])(fileName, animCount);
+			return ((delegate* unmanaged[Cdecl]<byte*, int*, ModelAnimation*>)funcTable[500])(fileName, animCount);
 			#else
-			return (ModelAnimation*)((delegate* unmanaged[Cdecl]<nint, nint, nint>)funcTable[503])((nint)fileName, (nint)animCount);
+			return (ModelAnimation*)((delegate* unmanaged[Cdecl]<nint, nint, nint>)funcTable[500])((nint)fileName, (nint)animCount);
 			#endif
 		}
 
@@ -1502,9 +1275,9 @@ namespace Hexa.NET.Raylib
 		internal static void UpdateModelAnimationNative([NativeName(NativeNameType.Param, "model")] [NativeName(NativeNameType.Type, "Model")] Model model, [NativeName(NativeNameType.Param, "anim")] [NativeName(NativeNameType.Type, "ModelAnimation")] ModelAnimation anim, [NativeName(NativeNameType.Param, "frame")] [NativeName(NativeNameType.Type, "int")] int frame)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Model, ModelAnimation, int, void>)funcTable[504])(model, anim, frame);
+			((delegate* unmanaged[Cdecl]<Model, ModelAnimation, int, void>)funcTable[501])(model, anim, frame);
 			#else
-			((delegate* unmanaged[Cdecl]<Model, ModelAnimation, int, void>)funcTable[504])(model, anim, frame);
+			((delegate* unmanaged[Cdecl]<Model, ModelAnimation, int, void>)funcTable[501])(model, anim, frame);
 			#endif
 		}
 
@@ -1521,9 +1294,9 @@ namespace Hexa.NET.Raylib
 		internal static void UpdateModelAnimationBonesNative([NativeName(NativeNameType.Param, "model")] [NativeName(NativeNameType.Type, "Model")] Model model, [NativeName(NativeNameType.Param, "anim")] [NativeName(NativeNameType.Type, "ModelAnimation")] ModelAnimation anim, [NativeName(NativeNameType.Param, "frame")] [NativeName(NativeNameType.Type, "int")] int frame)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Model, ModelAnimation, int, void>)funcTable[505])(model, anim, frame);
+			((delegate* unmanaged[Cdecl]<Model, ModelAnimation, int, void>)funcTable[502])(model, anim, frame);
 			#else
-			((delegate* unmanaged[Cdecl]<Model, ModelAnimation, int, void>)funcTable[505])(model, anim, frame);
+			((delegate* unmanaged[Cdecl]<Model, ModelAnimation, int, void>)funcTable[502])(model, anim, frame);
 			#endif
 		}
 
@@ -1540,9 +1313,9 @@ namespace Hexa.NET.Raylib
 		internal static void UnloadModelAnimationNative([NativeName(NativeNameType.Param, "anim")] [NativeName(NativeNameType.Type, "ModelAnimation")] ModelAnimation anim)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ModelAnimation, void>)funcTable[506])(anim);
+			((delegate* unmanaged[Cdecl]<ModelAnimation, void>)funcTable[503])(anim);
 			#else
-			((delegate* unmanaged[Cdecl]<ModelAnimation, void>)funcTable[506])(anim);
+			((delegate* unmanaged[Cdecl]<ModelAnimation, void>)funcTable[503])(anim);
 			#endif
 		}
 
@@ -1559,9 +1332,9 @@ namespace Hexa.NET.Raylib
 		internal static void UnloadModelAnimationsNative([NativeName(NativeNameType.Param, "animations")] [NativeName(NativeNameType.Type, "ModelAnimation *")] ModelAnimation* animations, [NativeName(NativeNameType.Param, "animCount")] [NativeName(NativeNameType.Type, "int")] int animCount)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ModelAnimation*, int, void>)funcTable[507])(animations, animCount);
+			((delegate* unmanaged[Cdecl]<ModelAnimation*, int, void>)funcTable[504])(animations, animCount);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, int, void>)funcTable[507])((nint)animations, animCount);
+			((delegate* unmanaged[Cdecl]<nint, int, void>)funcTable[504])((nint)animations, animCount);
 			#endif
 		}
 
@@ -1588,9 +1361,9 @@ namespace Hexa.NET.Raylib
 		internal static byte IsModelAnimationValidNative([NativeName(NativeNameType.Param, "model")] [NativeName(NativeNameType.Type, "Model")] Model model, [NativeName(NativeNameType.Param, "anim")] [NativeName(NativeNameType.Type, "ModelAnimation")] ModelAnimation anim)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Model, ModelAnimation, byte>)funcTable[508])(model, anim);
+			return ((delegate* unmanaged[Cdecl]<Model, ModelAnimation, byte>)funcTable[505])(model, anim);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<Model, ModelAnimation, byte>)funcTable[508])(model, anim);
+			return (byte)((delegate* unmanaged[Cdecl]<Model, ModelAnimation, byte>)funcTable[505])(model, anim);
 			#endif
 		}
 
@@ -1611,9 +1384,9 @@ namespace Hexa.NET.Raylib
 		internal static byte CheckCollisionSpheresNative([NativeName(NativeNameType.Param, "center1")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 center1, [NativeName(NativeNameType.Param, "radius1")] [NativeName(NativeNameType.Type, "float")] float radius1, [NativeName(NativeNameType.Param, "center2")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 center2, [NativeName(NativeNameType.Param, "radius2")] [NativeName(NativeNameType.Type, "float")] float radius2)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Vector3, float, Vector3, float, byte>)funcTable[509])(center1, radius1, center2, radius2);
+			return ((delegate* unmanaged[Cdecl]<Vector3, float, Vector3, float, byte>)funcTable[506])(center1, radius1, center2, radius2);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<Vector3, float, Vector3, float, byte>)funcTable[509])(center1, radius1, center2, radius2);
+			return (byte)((delegate* unmanaged[Cdecl]<Vector3, float, Vector3, float, byte>)funcTable[506])(center1, radius1, center2, radius2);
 			#endif
 		}
 
@@ -1634,9 +1407,9 @@ namespace Hexa.NET.Raylib
 		internal static byte CheckCollisionBoxesNative([NativeName(NativeNameType.Param, "box1")] [NativeName(NativeNameType.Type, "BoundingBox")] BoundingBox box1, [NativeName(NativeNameType.Param, "box2")] [NativeName(NativeNameType.Type, "BoundingBox")] BoundingBox box2)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<BoundingBox, BoundingBox, byte>)funcTable[510])(box1, box2);
+			return ((delegate* unmanaged[Cdecl]<BoundingBox, BoundingBox, byte>)funcTable[507])(box1, box2);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<BoundingBox, BoundingBox, byte>)funcTable[510])(box1, box2);
+			return (byte)((delegate* unmanaged[Cdecl]<BoundingBox, BoundingBox, byte>)funcTable[507])(box1, box2);
 			#endif
 		}
 
@@ -1654,9 +1427,9 @@ namespace Hexa.NET.Raylib
 		internal static byte CheckCollisionBoxSphereNative([NativeName(NativeNameType.Param, "box")] [NativeName(NativeNameType.Type, "BoundingBox")] BoundingBox box, [NativeName(NativeNameType.Param, "center")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 center, [NativeName(NativeNameType.Param, "radius")] [NativeName(NativeNameType.Type, "float")] float radius)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<BoundingBox, Vector3, float, byte>)funcTable[511])(box, center, radius);
+			return ((delegate* unmanaged[Cdecl]<BoundingBox, Vector3, float, byte>)funcTable[508])(box, center, radius);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<BoundingBox, Vector3, float, byte>)funcTable[511])(box, center, radius);
+			return (byte)((delegate* unmanaged[Cdecl]<BoundingBox, Vector3, float, byte>)funcTable[508])(box, center, radius);
 			#endif
 		}
 
@@ -1674,9 +1447,9 @@ namespace Hexa.NET.Raylib
 		internal static RayCollision GetRayCollisionSphereNative([NativeName(NativeNameType.Param, "ray")] [NativeName(NativeNameType.Type, "Ray")] Ray ray, [NativeName(NativeNameType.Param, "center")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 center, [NativeName(NativeNameType.Param, "radius")] [NativeName(NativeNameType.Type, "float")] float radius)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Ray, Vector3, float, RayCollision>)funcTable[512])(ray, center, radius);
+			return ((delegate* unmanaged[Cdecl]<Ray, Vector3, float, RayCollision>)funcTable[509])(ray, center, radius);
 			#else
-			return (RayCollision)((delegate* unmanaged[Cdecl]<Ray, Vector3, float, RayCollision>)funcTable[512])(ray, center, radius);
+			return (RayCollision)((delegate* unmanaged[Cdecl]<Ray, Vector3, float, RayCollision>)funcTable[509])(ray, center, radius);
 			#endif
 		}
 
@@ -1694,9 +1467,9 @@ namespace Hexa.NET.Raylib
 		internal static RayCollision GetRayCollisionBoxNative([NativeName(NativeNameType.Param, "ray")] [NativeName(NativeNameType.Type, "Ray")] Ray ray, [NativeName(NativeNameType.Param, "box")] [NativeName(NativeNameType.Type, "BoundingBox")] BoundingBox box)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Ray, BoundingBox, RayCollision>)funcTable[513])(ray, box);
+			return ((delegate* unmanaged[Cdecl]<Ray, BoundingBox, RayCollision>)funcTable[510])(ray, box);
 			#else
-			return (RayCollision)((delegate* unmanaged[Cdecl]<Ray, BoundingBox, RayCollision>)funcTable[513])(ray, box);
+			return (RayCollision)((delegate* unmanaged[Cdecl]<Ray, BoundingBox, RayCollision>)funcTable[510])(ray, box);
 			#endif
 		}
 
@@ -1714,9 +1487,9 @@ namespace Hexa.NET.Raylib
 		internal static RayCollision GetRayCollisionMeshNative([NativeName(NativeNameType.Param, "ray")] [NativeName(NativeNameType.Type, "Ray")] Ray ray, [NativeName(NativeNameType.Param, "mesh")] [NativeName(NativeNameType.Type, "Mesh")] Mesh mesh, [NativeName(NativeNameType.Param, "transform")] [NativeName(NativeNameType.Type, "Matrix")] Matrix4x4 transform)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Ray, Mesh, Matrix4x4, RayCollision>)funcTable[514])(ray, mesh, transform);
+			return ((delegate* unmanaged[Cdecl]<Ray, Mesh, Matrix4x4, RayCollision>)funcTable[511])(ray, mesh, transform);
 			#else
-			return (RayCollision)((delegate* unmanaged[Cdecl]<Ray, Mesh, Matrix4x4, RayCollision>)funcTable[514])(ray, mesh, transform);
+			return (RayCollision)((delegate* unmanaged[Cdecl]<Ray, Mesh, Matrix4x4, RayCollision>)funcTable[511])(ray, mesh, transform);
 			#endif
 		}
 
@@ -1734,9 +1507,9 @@ namespace Hexa.NET.Raylib
 		internal static RayCollision GetRayCollisionTriangleNative([NativeName(NativeNameType.Param, "ray")] [NativeName(NativeNameType.Type, "Ray")] Ray ray, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 p1, [NativeName(NativeNameType.Param, "p2")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 p2, [NativeName(NativeNameType.Param, "p3")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 p3)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Ray, Vector3, Vector3, Vector3, RayCollision>)funcTable[515])(ray, p1, p2, p3);
+			return ((delegate* unmanaged[Cdecl]<Ray, Vector3, Vector3, Vector3, RayCollision>)funcTable[512])(ray, p1, p2, p3);
 			#else
-			return (RayCollision)((delegate* unmanaged[Cdecl]<Ray, Vector3, Vector3, Vector3, RayCollision>)funcTable[515])(ray, p1, p2, p3);
+			return (RayCollision)((delegate* unmanaged[Cdecl]<Ray, Vector3, Vector3, Vector3, RayCollision>)funcTable[512])(ray, p1, p2, p3);
 			#endif
 		}
 
@@ -1754,9 +1527,9 @@ namespace Hexa.NET.Raylib
 		internal static RayCollision GetRayCollisionQuadNative([NativeName(NativeNameType.Param, "ray")] [NativeName(NativeNameType.Type, "Ray")] Ray ray, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 p1, [NativeName(NativeNameType.Param, "p2")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 p2, [NativeName(NativeNameType.Param, "p3")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 p3, [NativeName(NativeNameType.Param, "p4")] [NativeName(NativeNameType.Type, "Vector3")] Vector3 p4)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Ray, Vector3, Vector3, Vector3, Vector3, RayCollision>)funcTable[516])(ray, p1, p2, p3, p4);
+			return ((delegate* unmanaged[Cdecl]<Ray, Vector3, Vector3, Vector3, Vector3, RayCollision>)funcTable[513])(ray, p1, p2, p3, p4);
 			#else
-			return (RayCollision)((delegate* unmanaged[Cdecl]<Ray, Vector3, Vector3, Vector3, Vector3, RayCollision>)funcTable[516])(ray, p1, p2, p3, p4);
+			return (RayCollision)((delegate* unmanaged[Cdecl]<Ray, Vector3, Vector3, Vector3, Vector3, RayCollision>)funcTable[513])(ray, p1, p2, p3, p4);
 			#endif
 		}
 
@@ -1777,9 +1550,9 @@ namespace Hexa.NET.Raylib
 		internal static void InitAudioDeviceNative()
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<void>)funcTable[517])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[514])();
 			#else
-			((delegate* unmanaged[Cdecl]<void>)funcTable[517])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[514])();
 			#endif
 		}
 
@@ -1799,9 +1572,9 @@ namespace Hexa.NET.Raylib
 		internal static void CloseAudioDeviceNative()
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<void>)funcTable[518])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[515])();
 			#else
-			((delegate* unmanaged[Cdecl]<void>)funcTable[518])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[515])();
 			#endif
 		}
 
@@ -1818,9 +1591,9 @@ namespace Hexa.NET.Raylib
 		internal static byte IsAudioDeviceReadyNative()
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<byte>)funcTable[519])();
+			return ((delegate* unmanaged[Cdecl]<byte>)funcTable[516])();
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<byte>)funcTable[519])();
+			return (byte)((delegate* unmanaged[Cdecl]<byte>)funcTable[516])();
 			#endif
 		}
 
@@ -1838,9 +1611,9 @@ namespace Hexa.NET.Raylib
 		internal static void SetMasterVolumeNative([NativeName(NativeNameType.Param, "volume")] [NativeName(NativeNameType.Type, "float")] float volume)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<float, void>)funcTable[520])(volume);
+			((delegate* unmanaged[Cdecl]<float, void>)funcTable[517])(volume);
 			#else
-			((delegate* unmanaged[Cdecl]<float, void>)funcTable[520])(volume);
+			((delegate* unmanaged[Cdecl]<float, void>)funcTable[517])(volume);
 			#endif
 		}
 
@@ -1857,9 +1630,9 @@ namespace Hexa.NET.Raylib
 		internal static float GetMasterVolumeNative()
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<float>)funcTable[521])();
+			return ((delegate* unmanaged[Cdecl]<float>)funcTable[518])();
 			#else
-			return (float)((delegate* unmanaged[Cdecl]<float>)funcTable[521])();
+			return (float)((delegate* unmanaged[Cdecl]<float>)funcTable[518])();
 			#endif
 		}
 
@@ -1880,9 +1653,9 @@ namespace Hexa.NET.Raylib
 		internal static Wave LoadWaveNative([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] byte* fileName)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<byte*, Wave>)funcTable[522])(fileName);
+			return ((delegate* unmanaged[Cdecl]<byte*, Wave>)funcTable[519])(fileName);
 			#else
-			return (Wave)((delegate* unmanaged[Cdecl]<nint, Wave>)funcTable[522])((nint)fileName);
+			return (Wave)((delegate* unmanaged[Cdecl]<nint, Wave>)funcTable[519])((nint)fileName);
 			#endif
 		}
 
@@ -1963,9 +1736,9 @@ namespace Hexa.NET.Raylib
 		internal static Wave LoadWaveFromMemoryNative([NativeName(NativeNameType.Param, "fileType")] [NativeName(NativeNameType.Type, "char const *")] byte* fileType, [NativeName(NativeNameType.Param, "fileData")] [NativeName(NativeNameType.Type, "unsigned char const *")] byte* fileData, [NativeName(NativeNameType.Param, "dataSize")] [NativeName(NativeNameType.Type, "int")] int dataSize)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<byte*, byte*, int, Wave>)funcTable[523])(fileType, fileData, dataSize);
+			return ((delegate* unmanaged[Cdecl]<byte*, byte*, int, Wave>)funcTable[520])(fileType, fileData, dataSize);
 			#else
-			return (Wave)((delegate* unmanaged[Cdecl]<nint, nint, int, Wave>)funcTable[523])((nint)fileType, (nint)fileData, dataSize);
+			return (Wave)((delegate* unmanaged[Cdecl]<nint, nint, int, Wave>)funcTable[520])((nint)fileType, (nint)fileData, dataSize);
 			#endif
 		}
 
@@ -2105,9 +1878,9 @@ namespace Hexa.NET.Raylib
 		internal static byte IsWaveValidNative([NativeName(NativeNameType.Param, "wave")] [NativeName(NativeNameType.Type, "Wave")] Wave wave)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Wave, byte>)funcTable[524])(wave);
+			return ((delegate* unmanaged[Cdecl]<Wave, byte>)funcTable[521])(wave);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<Wave, byte>)funcTable[524])(wave);
+			return (byte)((delegate* unmanaged[Cdecl]<Wave, byte>)funcTable[521])(wave);
 			#endif
 		}
 
@@ -2125,9 +1898,9 @@ namespace Hexa.NET.Raylib
 		internal static Sound LoadSoundNative([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] byte* fileName)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<byte*, Sound>)funcTable[525])(fileName);
+			return ((delegate* unmanaged[Cdecl]<byte*, Sound>)funcTable[522])(fileName);
 			#else
-			return (Sound)((delegate* unmanaged[Cdecl]<nint, Sound>)funcTable[525])((nint)fileName);
+			return (Sound)((delegate* unmanaged[Cdecl]<nint, Sound>)funcTable[522])((nint)fileName);
 			#endif
 		}
 
@@ -2196,9 +1969,9 @@ namespace Hexa.NET.Raylib
 		internal static Sound LoadSoundFromWaveNative([NativeName(NativeNameType.Param, "wave")] [NativeName(NativeNameType.Type, "Wave")] Wave wave)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Wave, Sound>)funcTable[526])(wave);
+			return ((delegate* unmanaged[Cdecl]<Wave, Sound>)funcTable[523])(wave);
 			#else
-			return (Sound)((delegate* unmanaged[Cdecl]<Wave, Sound>)funcTable[526])(wave);
+			return (Sound)((delegate* unmanaged[Cdecl]<Wave, Sound>)funcTable[523])(wave);
 			#endif
 		}
 
@@ -2216,9 +1989,9 @@ namespace Hexa.NET.Raylib
 		internal static Sound LoadSoundAliasNative([NativeName(NativeNameType.Param, "source")] [NativeName(NativeNameType.Type, "Sound")] Sound source)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Sound, Sound>)funcTable[527])(source);
+			return ((delegate* unmanaged[Cdecl]<Sound, Sound>)funcTable[524])(source);
 			#else
-			return (Sound)((delegate* unmanaged[Cdecl]<Sound, Sound>)funcTable[527])(source);
+			return (Sound)((delegate* unmanaged[Cdecl]<Sound, Sound>)funcTable[524])(source);
 			#endif
 		}
 
@@ -2236,9 +2009,9 @@ namespace Hexa.NET.Raylib
 		internal static byte IsSoundValidNative([NativeName(NativeNameType.Param, "sound")] [NativeName(NativeNameType.Type, "Sound")] Sound sound)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Sound, byte>)funcTable[528])(sound);
+			return ((delegate* unmanaged[Cdecl]<Sound, byte>)funcTable[525])(sound);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<Sound, byte>)funcTable[528])(sound);
+			return (byte)((delegate* unmanaged[Cdecl]<Sound, byte>)funcTable[525])(sound);
 			#endif
 		}
 
@@ -2256,9 +2029,9 @@ namespace Hexa.NET.Raylib
 		internal static void UpdateSoundNative([NativeName(NativeNameType.Param, "sound")] [NativeName(NativeNameType.Type, "Sound")] Sound sound, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "void const *")] void* data, [NativeName(NativeNameType.Param, "sampleCount")] [NativeName(NativeNameType.Type, "int")] int sampleCount)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Sound, void*, int, void>)funcTable[529])(sound, data, sampleCount);
+			((delegate* unmanaged[Cdecl]<Sound, void*, int, void>)funcTable[526])(sound, data, sampleCount);
 			#else
-			((delegate* unmanaged[Cdecl]<Sound, nint, int, void>)funcTable[529])(sound, (nint)data, sampleCount);
+			((delegate* unmanaged[Cdecl]<Sound, nint, int, void>)funcTable[526])(sound, (nint)data, sampleCount);
 			#endif
 		}
 
@@ -2275,9 +2048,9 @@ namespace Hexa.NET.Raylib
 		internal static void UnloadWaveNative([NativeName(NativeNameType.Param, "wave")] [NativeName(NativeNameType.Type, "Wave")] Wave wave)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Wave, void>)funcTable[530])(wave);
+			((delegate* unmanaged[Cdecl]<Wave, void>)funcTable[527])(wave);
 			#else
-			((delegate* unmanaged[Cdecl]<Wave, void>)funcTable[530])(wave);
+			((delegate* unmanaged[Cdecl]<Wave, void>)funcTable[527])(wave);
 			#endif
 		}
 
@@ -2294,9 +2067,9 @@ namespace Hexa.NET.Raylib
 		internal static void UnloadSoundNative([NativeName(NativeNameType.Param, "sound")] [NativeName(NativeNameType.Type, "Sound")] Sound sound)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[531])(sound);
+			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[528])(sound);
 			#else
-			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[531])(sound);
+			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[528])(sound);
 			#endif
 		}
 
@@ -2313,9 +2086,9 @@ namespace Hexa.NET.Raylib
 		internal static void UnloadSoundAliasNative([NativeName(NativeNameType.Param, "alias")] [NativeName(NativeNameType.Type, "Sound")] Sound alias)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[532])(alias);
+			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[529])(alias);
 			#else
-			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[532])(alias);
+			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[529])(alias);
 			#endif
 		}
 
@@ -2332,9 +2105,9 @@ namespace Hexa.NET.Raylib
 		internal static byte ExportWaveNative([NativeName(NativeNameType.Param, "wave")] [NativeName(NativeNameType.Type, "Wave")] Wave wave, [NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] byte* fileName)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Wave, byte*, byte>)funcTable[533])(wave, fileName);
+			return ((delegate* unmanaged[Cdecl]<Wave, byte*, byte>)funcTable[530])(wave, fileName);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<Wave, nint, byte>)funcTable[533])(wave, (nint)fileName);
+			return (byte)((delegate* unmanaged[Cdecl]<Wave, nint, byte>)funcTable[530])(wave, (nint)fileName);
 			#endif
 		}
 
@@ -2403,9 +2176,9 @@ namespace Hexa.NET.Raylib
 		internal static byte ExportWaveAsCodeNative([NativeName(NativeNameType.Param, "wave")] [NativeName(NativeNameType.Type, "Wave")] Wave wave, [NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] byte* fileName)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Wave, byte*, byte>)funcTable[534])(wave, fileName);
+			return ((delegate* unmanaged[Cdecl]<Wave, byte*, byte>)funcTable[531])(wave, fileName);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<Wave, nint, byte>)funcTable[534])(wave, (nint)fileName);
+			return (byte)((delegate* unmanaged[Cdecl]<Wave, nint, byte>)funcTable[531])(wave, (nint)fileName);
 			#endif
 		}
 
@@ -2477,9 +2250,9 @@ namespace Hexa.NET.Raylib
 		internal static void PlaySoundNative([NativeName(NativeNameType.Param, "sound")] [NativeName(NativeNameType.Type, "Sound")] Sound sound)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[535])(sound);
+			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[532])(sound);
 			#else
-			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[535])(sound);
+			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[532])(sound);
 			#endif
 		}
 
@@ -2499,9 +2272,9 @@ namespace Hexa.NET.Raylib
 		internal static void StopSoundNative([NativeName(NativeNameType.Param, "sound")] [NativeName(NativeNameType.Type, "Sound")] Sound sound)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[536])(sound);
+			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[533])(sound);
 			#else
-			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[536])(sound);
+			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[533])(sound);
 			#endif
 		}
 
@@ -2518,9 +2291,9 @@ namespace Hexa.NET.Raylib
 		internal static void PauseSoundNative([NativeName(NativeNameType.Param, "sound")] [NativeName(NativeNameType.Type, "Sound")] Sound sound)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[537])(sound);
+			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[534])(sound);
 			#else
-			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[537])(sound);
+			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[534])(sound);
 			#endif
 		}
 
@@ -2537,9 +2310,9 @@ namespace Hexa.NET.Raylib
 		internal static void ResumeSoundNative([NativeName(NativeNameType.Param, "sound")] [NativeName(NativeNameType.Type, "Sound")] Sound sound)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[538])(sound);
+			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[535])(sound);
 			#else
-			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[538])(sound);
+			((delegate* unmanaged[Cdecl]<Sound, void>)funcTable[535])(sound);
 			#endif
 		}
 
@@ -2556,9 +2329,9 @@ namespace Hexa.NET.Raylib
 		internal static byte IsSoundPlayingNative([NativeName(NativeNameType.Param, "sound")] [NativeName(NativeNameType.Type, "Sound")] Sound sound)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Sound, byte>)funcTable[539])(sound);
+			return ((delegate* unmanaged[Cdecl]<Sound, byte>)funcTable[536])(sound);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<Sound, byte>)funcTable[539])(sound);
+			return (byte)((delegate* unmanaged[Cdecl]<Sound, byte>)funcTable[536])(sound);
 			#endif
 		}
 
@@ -2576,9 +2349,9 @@ namespace Hexa.NET.Raylib
 		internal static void SetSoundVolumeNative([NativeName(NativeNameType.Param, "sound")] [NativeName(NativeNameType.Type, "Sound")] Sound sound, [NativeName(NativeNameType.Param, "volume")] [NativeName(NativeNameType.Type, "float")] float volume)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Sound, float, void>)funcTable[540])(sound, volume);
+			((delegate* unmanaged[Cdecl]<Sound, float, void>)funcTable[537])(sound, volume);
 			#else
-			((delegate* unmanaged[Cdecl]<Sound, float, void>)funcTable[540])(sound, volume);
+			((delegate* unmanaged[Cdecl]<Sound, float, void>)funcTable[537])(sound, volume);
 			#endif
 		}
 
@@ -2595,9 +2368,9 @@ namespace Hexa.NET.Raylib
 		internal static void SetSoundPitchNative([NativeName(NativeNameType.Param, "sound")] [NativeName(NativeNameType.Type, "Sound")] Sound sound, [NativeName(NativeNameType.Param, "pitch")] [NativeName(NativeNameType.Type, "float")] float pitch)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Sound, float, void>)funcTable[541])(sound, pitch);
+			((delegate* unmanaged[Cdecl]<Sound, float, void>)funcTable[538])(sound, pitch);
 			#else
-			((delegate* unmanaged[Cdecl]<Sound, float, void>)funcTable[541])(sound, pitch);
+			((delegate* unmanaged[Cdecl]<Sound, float, void>)funcTable[538])(sound, pitch);
 			#endif
 		}
 
@@ -2614,9 +2387,9 @@ namespace Hexa.NET.Raylib
 		internal static void SetSoundPanNative([NativeName(NativeNameType.Param, "sound")] [NativeName(NativeNameType.Type, "Sound")] Sound sound, [NativeName(NativeNameType.Param, "pan")] [NativeName(NativeNameType.Type, "float")] float pan)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Sound, float, void>)funcTable[542])(sound, pan);
+			((delegate* unmanaged[Cdecl]<Sound, float, void>)funcTable[539])(sound, pan);
 			#else
-			((delegate* unmanaged[Cdecl]<Sound, float, void>)funcTable[542])(sound, pan);
+			((delegate* unmanaged[Cdecl]<Sound, float, void>)funcTable[539])(sound, pan);
 			#endif
 		}
 
@@ -2633,9 +2406,9 @@ namespace Hexa.NET.Raylib
 		internal static Wave WaveCopyNative([NativeName(NativeNameType.Param, "wave")] [NativeName(NativeNameType.Type, "Wave")] Wave wave)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Wave, Wave>)funcTable[543])(wave);
+			return ((delegate* unmanaged[Cdecl]<Wave, Wave>)funcTable[540])(wave);
 			#else
-			return (Wave)((delegate* unmanaged[Cdecl]<Wave, Wave>)funcTable[543])(wave);
+			return (Wave)((delegate* unmanaged[Cdecl]<Wave, Wave>)funcTable[540])(wave);
 			#endif
 		}
 
@@ -2653,9 +2426,9 @@ namespace Hexa.NET.Raylib
 		internal static void WaveCropNative([NativeName(NativeNameType.Param, "wave")] [NativeName(NativeNameType.Type, "Wave *")] Wave* wave, [NativeName(NativeNameType.Param, "initFrame")] [NativeName(NativeNameType.Type, "int")] int initFrame, [NativeName(NativeNameType.Param, "finalFrame")] [NativeName(NativeNameType.Type, "int")] int finalFrame)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Wave*, int, int, void>)funcTable[544])(wave, initFrame, finalFrame);
+			((delegate* unmanaged[Cdecl]<Wave*, int, int, void>)funcTable[541])(wave, initFrame, finalFrame);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, int, int, void>)funcTable[544])((nint)wave, initFrame, finalFrame);
+			((delegate* unmanaged[Cdecl]<nint, int, int, void>)funcTable[541])((nint)wave, initFrame, finalFrame);
 			#endif
 		}
 
@@ -2682,9 +2455,9 @@ namespace Hexa.NET.Raylib
 		internal static void WaveFormatNative([NativeName(NativeNameType.Param, "wave")] [NativeName(NativeNameType.Type, "Wave *")] Wave* wave, [NativeName(NativeNameType.Param, "sampleRate")] [NativeName(NativeNameType.Type, "int")] int sampleRate, [NativeName(NativeNameType.Param, "sampleSize")] [NativeName(NativeNameType.Type, "int")] int sampleSize, [NativeName(NativeNameType.Param, "channels")] [NativeName(NativeNameType.Type, "int")] int channels)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Wave*, int, int, int, void>)funcTable[545])(wave, sampleRate, sampleSize, channels);
+			((delegate* unmanaged[Cdecl]<Wave*, int, int, int, void>)funcTable[542])(wave, sampleRate, sampleSize, channels);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, int, int, int, void>)funcTable[545])((nint)wave, sampleRate, sampleSize, channels);
+			((delegate* unmanaged[Cdecl]<nint, int, int, int, void>)funcTable[542])((nint)wave, sampleRate, sampleSize, channels);
 			#endif
 		}
 
@@ -2711,9 +2484,9 @@ namespace Hexa.NET.Raylib
 		internal static float* LoadWaveSamplesNative([NativeName(NativeNameType.Param, "wave")] [NativeName(NativeNameType.Type, "Wave")] Wave wave)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Wave, float*>)funcTable[546])(wave);
+			return ((delegate* unmanaged[Cdecl]<Wave, float*>)funcTable[543])(wave);
 			#else
-			return (float*)((delegate* unmanaged[Cdecl]<Wave, nint>)funcTable[546])(wave);
+			return (float*)((delegate* unmanaged[Cdecl]<Wave, nint>)funcTable[543])(wave);
 			#endif
 		}
 
@@ -2731,9 +2504,9 @@ namespace Hexa.NET.Raylib
 		internal static void UnloadWaveSamplesNative([NativeName(NativeNameType.Param, "samples")] [NativeName(NativeNameType.Type, "float *")] float* samples)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<float*, void>)funcTable[547])(samples);
+			((delegate* unmanaged[Cdecl]<float*, void>)funcTable[544])(samples);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[547])((nint)samples);
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[544])((nint)samples);
 			#endif
 		}
 
@@ -2763,9 +2536,9 @@ namespace Hexa.NET.Raylib
 		internal static Music LoadMusicStreamNative([NativeName(NativeNameType.Param, "fileName")] [NativeName(NativeNameType.Type, "char const *")] byte* fileName)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<byte*, Music>)funcTable[548])(fileName);
+			return ((delegate* unmanaged[Cdecl]<byte*, Music>)funcTable[545])(fileName);
 			#else
-			return (Music)((delegate* unmanaged[Cdecl]<nint, Music>)funcTable[548])((nint)fileName);
+			return (Music)((delegate* unmanaged[Cdecl]<nint, Music>)funcTable[545])((nint)fileName);
 			#endif
 		}
 
@@ -2846,9 +2619,9 @@ namespace Hexa.NET.Raylib
 		internal static Music LoadMusicStreamFromMemoryNative([NativeName(NativeNameType.Param, "fileType")] [NativeName(NativeNameType.Type, "char const *")] byte* fileType, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "unsigned char const *")] byte* data, [NativeName(NativeNameType.Param, "dataSize")] [NativeName(NativeNameType.Type, "int")] int dataSize)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<byte*, byte*, int, Music>)funcTable[549])(fileType, data, dataSize);
+			return ((delegate* unmanaged[Cdecl]<byte*, byte*, int, Music>)funcTable[546])(fileType, data, dataSize);
 			#else
-			return (Music)((delegate* unmanaged[Cdecl]<nint, nint, int, Music>)funcTable[549])((nint)fileType, (nint)data, dataSize);
+			return (Music)((delegate* unmanaged[Cdecl]<nint, nint, int, Music>)funcTable[546])((nint)fileType, (nint)data, dataSize);
 			#endif
 		}
 
@@ -2988,9 +2761,9 @@ namespace Hexa.NET.Raylib
 		internal static byte IsMusicValidNative([NativeName(NativeNameType.Param, "music")] [NativeName(NativeNameType.Type, "Music")] Music music)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Music, byte>)funcTable[550])(music);
+			return ((delegate* unmanaged[Cdecl]<Music, byte>)funcTable[547])(music);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<Music, byte>)funcTable[550])(music);
+			return (byte)((delegate* unmanaged[Cdecl]<Music, byte>)funcTable[547])(music);
 			#endif
 		}
 
@@ -3008,9 +2781,9 @@ namespace Hexa.NET.Raylib
 		internal static void UnloadMusicStreamNative([NativeName(NativeNameType.Param, "music")] [NativeName(NativeNameType.Type, "Music")] Music music)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[551])(music);
+			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[548])(music);
 			#else
-			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[551])(music);
+			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[548])(music);
 			#endif
 		}
 
@@ -3027,9 +2800,9 @@ namespace Hexa.NET.Raylib
 		internal static void PlayMusicStreamNative([NativeName(NativeNameType.Param, "music")] [NativeName(NativeNameType.Type, "Music")] Music music)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[552])(music);
+			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[549])(music);
 			#else
-			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[552])(music);
+			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[549])(music);
 			#endif
 		}
 
@@ -3046,9 +2819,9 @@ namespace Hexa.NET.Raylib
 		internal static byte IsMusicStreamPlayingNative([NativeName(NativeNameType.Param, "music")] [NativeName(NativeNameType.Type, "Music")] Music music)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Music, byte>)funcTable[553])(music);
+			return ((delegate* unmanaged[Cdecl]<Music, byte>)funcTable[550])(music);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<Music, byte>)funcTable[553])(music);
+			return (byte)((delegate* unmanaged[Cdecl]<Music, byte>)funcTable[550])(music);
 			#endif
 		}
 
@@ -3066,9 +2839,9 @@ namespace Hexa.NET.Raylib
 		internal static void UpdateMusicStreamNative([NativeName(NativeNameType.Param, "music")] [NativeName(NativeNameType.Type, "Music")] Music music)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[554])(music);
+			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[551])(music);
 			#else
-			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[554])(music);
+			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[551])(music);
 			#endif
 		}
 
@@ -3085,9 +2858,9 @@ namespace Hexa.NET.Raylib
 		internal static void StopMusicStreamNative([NativeName(NativeNameType.Param, "music")] [NativeName(NativeNameType.Type, "Music")] Music music)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[555])(music);
+			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[552])(music);
 			#else
-			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[555])(music);
+			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[552])(music);
 			#endif
 		}
 
@@ -3104,9 +2877,9 @@ namespace Hexa.NET.Raylib
 		internal static void PauseMusicStreamNative([NativeName(NativeNameType.Param, "music")] [NativeName(NativeNameType.Type, "Music")] Music music)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[556])(music);
+			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[553])(music);
 			#else
-			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[556])(music);
+			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[553])(music);
 			#endif
 		}
 
@@ -3123,9 +2896,9 @@ namespace Hexa.NET.Raylib
 		internal static void ResumeMusicStreamNative([NativeName(NativeNameType.Param, "music")] [NativeName(NativeNameType.Type, "Music")] Music music)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[557])(music);
+			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[554])(music);
 			#else
-			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[557])(music);
+			((delegate* unmanaged[Cdecl]<Music, void>)funcTable[554])(music);
 			#endif
 		}
 
@@ -3142,9 +2915,9 @@ namespace Hexa.NET.Raylib
 		internal static void SeekMusicStreamNative([NativeName(NativeNameType.Param, "music")] [NativeName(NativeNameType.Type, "Music")] Music music, [NativeName(NativeNameType.Param, "position")] [NativeName(NativeNameType.Type, "float")] float position)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Music, float, void>)funcTable[558])(music, position);
+			((delegate* unmanaged[Cdecl]<Music, float, void>)funcTable[555])(music, position);
 			#else
-			((delegate* unmanaged[Cdecl]<Music, float, void>)funcTable[558])(music, position);
+			((delegate* unmanaged[Cdecl]<Music, float, void>)funcTable[555])(music, position);
 			#endif
 		}
 
@@ -3161,9 +2934,9 @@ namespace Hexa.NET.Raylib
 		internal static void SetMusicVolumeNative([NativeName(NativeNameType.Param, "music")] [NativeName(NativeNameType.Type, "Music")] Music music, [NativeName(NativeNameType.Param, "volume")] [NativeName(NativeNameType.Type, "float")] float volume)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Music, float, void>)funcTable[559])(music, volume);
+			((delegate* unmanaged[Cdecl]<Music, float, void>)funcTable[556])(music, volume);
 			#else
-			((delegate* unmanaged[Cdecl]<Music, float, void>)funcTable[559])(music, volume);
+			((delegate* unmanaged[Cdecl]<Music, float, void>)funcTable[556])(music, volume);
 			#endif
 		}
 
@@ -3180,9 +2953,9 @@ namespace Hexa.NET.Raylib
 		internal static void SetMusicPitchNative([NativeName(NativeNameType.Param, "music")] [NativeName(NativeNameType.Type, "Music")] Music music, [NativeName(NativeNameType.Param, "pitch")] [NativeName(NativeNameType.Type, "float")] float pitch)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Music, float, void>)funcTable[560])(music, pitch);
+			((delegate* unmanaged[Cdecl]<Music, float, void>)funcTable[557])(music, pitch);
 			#else
-			((delegate* unmanaged[Cdecl]<Music, float, void>)funcTable[560])(music, pitch);
+			((delegate* unmanaged[Cdecl]<Music, float, void>)funcTable[557])(music, pitch);
 			#endif
 		}
 
@@ -3199,9 +2972,9 @@ namespace Hexa.NET.Raylib
 		internal static void SetMusicPanNative([NativeName(NativeNameType.Param, "music")] [NativeName(NativeNameType.Type, "Music")] Music music, [NativeName(NativeNameType.Param, "pan")] [NativeName(NativeNameType.Type, "float")] float pan)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Music, float, void>)funcTable[561])(music, pan);
+			((delegate* unmanaged[Cdecl]<Music, float, void>)funcTable[558])(music, pan);
 			#else
-			((delegate* unmanaged[Cdecl]<Music, float, void>)funcTable[561])(music, pan);
+			((delegate* unmanaged[Cdecl]<Music, float, void>)funcTable[558])(music, pan);
 			#endif
 		}
 
@@ -3218,9 +2991,9 @@ namespace Hexa.NET.Raylib
 		internal static float GetMusicTimeLengthNative([NativeName(NativeNameType.Param, "music")] [NativeName(NativeNameType.Type, "Music")] Music music)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Music, float>)funcTable[562])(music);
+			return ((delegate* unmanaged[Cdecl]<Music, float>)funcTable[559])(music);
 			#else
-			return (float)((delegate* unmanaged[Cdecl]<Music, float>)funcTable[562])(music);
+			return (float)((delegate* unmanaged[Cdecl]<Music, float>)funcTable[559])(music);
 			#endif
 		}
 
@@ -3238,9 +3011,9 @@ namespace Hexa.NET.Raylib
 		internal static float GetMusicTimePlayedNative([NativeName(NativeNameType.Param, "music")] [NativeName(NativeNameType.Type, "Music")] Music music)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Music, float>)funcTable[563])(music);
+			return ((delegate* unmanaged[Cdecl]<Music, float>)funcTable[560])(music);
 			#else
-			return (float)((delegate* unmanaged[Cdecl]<Music, float>)funcTable[563])(music);
+			return (float)((delegate* unmanaged[Cdecl]<Music, float>)funcTable[560])(music);
 			#endif
 		}
 
@@ -3261,9 +3034,9 @@ namespace Hexa.NET.Raylib
 		internal static AudioStream LoadAudioStreamNative([NativeName(NativeNameType.Param, "sampleRate")] [NativeName(NativeNameType.Type, "unsigned int")] uint sampleRate, [NativeName(NativeNameType.Param, "sampleSize")] [NativeName(NativeNameType.Type, "unsigned int")] uint sampleSize, [NativeName(NativeNameType.Param, "channels")] [NativeName(NativeNameType.Type, "unsigned int")] uint channels)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<uint, uint, uint, AudioStream>)funcTable[564])(sampleRate, sampleSize, channels);
+			return ((delegate* unmanaged[Cdecl]<uint, uint, uint, AudioStream>)funcTable[561])(sampleRate, sampleSize, channels);
 			#else
-			return (AudioStream)((delegate* unmanaged[Cdecl]<uint, uint, uint, AudioStream>)funcTable[564])(sampleRate, sampleSize, channels);
+			return (AudioStream)((delegate* unmanaged[Cdecl]<uint, uint, uint, AudioStream>)funcTable[561])(sampleRate, sampleSize, channels);
 			#endif
 		}
 
@@ -3284,9 +3057,9 @@ namespace Hexa.NET.Raylib
 		internal static byte IsAudioStreamValidNative([NativeName(NativeNameType.Param, "stream")] [NativeName(NativeNameType.Type, "AudioStream")] AudioStream stream)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<AudioStream, byte>)funcTable[565])(stream);
+			return ((delegate* unmanaged[Cdecl]<AudioStream, byte>)funcTable[562])(stream);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<AudioStream, byte>)funcTable[565])(stream);
+			return (byte)((delegate* unmanaged[Cdecl]<AudioStream, byte>)funcTable[562])(stream);
 			#endif
 		}
 
@@ -3304,9 +3077,9 @@ namespace Hexa.NET.Raylib
 		internal static void UnloadAudioStreamNative([NativeName(NativeNameType.Param, "stream")] [NativeName(NativeNameType.Type, "AudioStream")] AudioStream stream)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<AudioStream, void>)funcTable[566])(stream);
+			((delegate* unmanaged[Cdecl]<AudioStream, void>)funcTable[563])(stream);
 			#else
-			((delegate* unmanaged[Cdecl]<AudioStream, void>)funcTable[566])(stream);
+			((delegate* unmanaged[Cdecl]<AudioStream, void>)funcTable[563])(stream);
 			#endif
 		}
 
@@ -3323,9 +3096,9 @@ namespace Hexa.NET.Raylib
 		internal static void UpdateAudioStreamNative([NativeName(NativeNameType.Param, "stream")] [NativeName(NativeNameType.Type, "AudioStream")] AudioStream stream, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "void const *")] void* data, [NativeName(NativeNameType.Param, "frameCount")] [NativeName(NativeNameType.Type, "int")] int frameCount)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<AudioStream, void*, int, void>)funcTable[567])(stream, data, frameCount);
+			((delegate* unmanaged[Cdecl]<AudioStream, void*, int, void>)funcTable[564])(stream, data, frameCount);
 			#else
-			((delegate* unmanaged[Cdecl]<AudioStream, nint, int, void>)funcTable[567])(stream, (nint)data, frameCount);
+			((delegate* unmanaged[Cdecl]<AudioStream, nint, int, void>)funcTable[564])(stream, (nint)data, frameCount);
 			#endif
 		}
 
@@ -3342,9 +3115,9 @@ namespace Hexa.NET.Raylib
 		internal static byte IsAudioStreamProcessedNative([NativeName(NativeNameType.Param, "stream")] [NativeName(NativeNameType.Type, "AudioStream")] AudioStream stream)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<AudioStream, byte>)funcTable[568])(stream);
+			return ((delegate* unmanaged[Cdecl]<AudioStream, byte>)funcTable[565])(stream);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<AudioStream, byte>)funcTable[568])(stream);
+			return (byte)((delegate* unmanaged[Cdecl]<AudioStream, byte>)funcTable[565])(stream);
 			#endif
 		}
 
@@ -3362,9 +3135,9 @@ namespace Hexa.NET.Raylib
 		internal static void PlayAudioStreamNative([NativeName(NativeNameType.Param, "stream")] [NativeName(NativeNameType.Type, "AudioStream")] AudioStream stream)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<AudioStream, void>)funcTable[569])(stream);
+			((delegate* unmanaged[Cdecl]<AudioStream, void>)funcTable[566])(stream);
 			#else
-			((delegate* unmanaged[Cdecl]<AudioStream, void>)funcTable[569])(stream);
+			((delegate* unmanaged[Cdecl]<AudioStream, void>)funcTable[566])(stream);
 			#endif
 		}
 
@@ -3381,9 +3154,9 @@ namespace Hexa.NET.Raylib
 		internal static void PauseAudioStreamNative([NativeName(NativeNameType.Param, "stream")] [NativeName(NativeNameType.Type, "AudioStream")] AudioStream stream)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<AudioStream, void>)funcTable[570])(stream);
+			((delegate* unmanaged[Cdecl]<AudioStream, void>)funcTable[567])(stream);
 			#else
-			((delegate* unmanaged[Cdecl]<AudioStream, void>)funcTable[570])(stream);
+			((delegate* unmanaged[Cdecl]<AudioStream, void>)funcTable[567])(stream);
 			#endif
 		}
 
@@ -3400,9 +3173,9 @@ namespace Hexa.NET.Raylib
 		internal static void ResumeAudioStreamNative([NativeName(NativeNameType.Param, "stream")] [NativeName(NativeNameType.Type, "AudioStream")] AudioStream stream)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<AudioStream, void>)funcTable[571])(stream);
+			((delegate* unmanaged[Cdecl]<AudioStream, void>)funcTable[568])(stream);
 			#else
-			((delegate* unmanaged[Cdecl]<AudioStream, void>)funcTable[571])(stream);
+			((delegate* unmanaged[Cdecl]<AudioStream, void>)funcTable[568])(stream);
 			#endif
 		}
 
@@ -3419,9 +3192,9 @@ namespace Hexa.NET.Raylib
 		internal static byte IsAudioStreamPlayingNative([NativeName(NativeNameType.Param, "stream")] [NativeName(NativeNameType.Type, "AudioStream")] AudioStream stream)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<AudioStream, byte>)funcTable[572])(stream);
+			return ((delegate* unmanaged[Cdecl]<AudioStream, byte>)funcTable[569])(stream);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<AudioStream, byte>)funcTable[572])(stream);
+			return (byte)((delegate* unmanaged[Cdecl]<AudioStream, byte>)funcTable[569])(stream);
 			#endif
 		}
 
@@ -3439,9 +3212,9 @@ namespace Hexa.NET.Raylib
 		internal static void StopAudioStreamNative([NativeName(NativeNameType.Param, "stream")] [NativeName(NativeNameType.Type, "AudioStream")] AudioStream stream)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<AudioStream, void>)funcTable[573])(stream);
+			((delegate* unmanaged[Cdecl]<AudioStream, void>)funcTable[570])(stream);
 			#else
-			((delegate* unmanaged[Cdecl]<AudioStream, void>)funcTable[573])(stream);
+			((delegate* unmanaged[Cdecl]<AudioStream, void>)funcTable[570])(stream);
 			#endif
 		}
 
@@ -3458,9 +3231,9 @@ namespace Hexa.NET.Raylib
 		internal static void SetAudioStreamVolumeNative([NativeName(NativeNameType.Param, "stream")] [NativeName(NativeNameType.Type, "AudioStream")] AudioStream stream, [NativeName(NativeNameType.Param, "volume")] [NativeName(NativeNameType.Type, "float")] float volume)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<AudioStream, float, void>)funcTable[574])(stream, volume);
+			((delegate* unmanaged[Cdecl]<AudioStream, float, void>)funcTable[571])(stream, volume);
 			#else
-			((delegate* unmanaged[Cdecl]<AudioStream, float, void>)funcTable[574])(stream, volume);
+			((delegate* unmanaged[Cdecl]<AudioStream, float, void>)funcTable[571])(stream, volume);
 			#endif
 		}
 
@@ -3477,9 +3250,9 @@ namespace Hexa.NET.Raylib
 		internal static void SetAudioStreamPitchNative([NativeName(NativeNameType.Param, "stream")] [NativeName(NativeNameType.Type, "AudioStream")] AudioStream stream, [NativeName(NativeNameType.Param, "pitch")] [NativeName(NativeNameType.Type, "float")] float pitch)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<AudioStream, float, void>)funcTable[575])(stream, pitch);
+			((delegate* unmanaged[Cdecl]<AudioStream, float, void>)funcTable[572])(stream, pitch);
 			#else
-			((delegate* unmanaged[Cdecl]<AudioStream, float, void>)funcTable[575])(stream, pitch);
+			((delegate* unmanaged[Cdecl]<AudioStream, float, void>)funcTable[572])(stream, pitch);
 			#endif
 		}
 
@@ -3496,9 +3269,9 @@ namespace Hexa.NET.Raylib
 		internal static void SetAudioStreamPanNative([NativeName(NativeNameType.Param, "stream")] [NativeName(NativeNameType.Type, "AudioStream")] AudioStream stream, [NativeName(NativeNameType.Param, "pan")] [NativeName(NativeNameType.Type, "float")] float pan)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<AudioStream, float, void>)funcTable[576])(stream, pan);
+			((delegate* unmanaged[Cdecl]<AudioStream, float, void>)funcTable[573])(stream, pan);
 			#else
-			((delegate* unmanaged[Cdecl]<AudioStream, float, void>)funcTable[576])(stream, pan);
+			((delegate* unmanaged[Cdecl]<AudioStream, float, void>)funcTable[573])(stream, pan);
 			#endif
 		}
 
@@ -3515,9 +3288,9 @@ namespace Hexa.NET.Raylib
 		internal static void SetAudioStreamBufferSizeDefaultNative([NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "int")] int size)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<int, void>)funcTable[577])(size);
+			((delegate* unmanaged[Cdecl]<int, void>)funcTable[574])(size);
 			#else
-			((delegate* unmanaged[Cdecl]<int, void>)funcTable[577])(size);
+			((delegate* unmanaged[Cdecl]<int, void>)funcTable[574])(size);
 			#endif
 		}
 
@@ -3534,9 +3307,9 @@ namespace Hexa.NET.Raylib
 		internal static void SetAudioStreamCallbackNative([NativeName(NativeNameType.Param, "stream")] [NativeName(NativeNameType.Type, "AudioStream")] AudioStream stream, [NativeName(NativeNameType.Param, "callback")] [NativeName(NativeNameType.Type, "AudioCallback")] AudioCallback callback)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<AudioStream, delegate*<void*, uint, void>, void>)funcTable[578])(stream, (delegate*<void*, uint, void>)Utils.GetFunctionPointerForDelegate(callback));
+			((delegate* unmanaged[Cdecl]<AudioStream, delegate*<void*, uint, void>, void>)funcTable[575])(stream, (delegate*<void*, uint, void>)Utils.GetFunctionPointerForDelegate(callback));
 			#else
-			((delegate* unmanaged[Cdecl]<AudioStream, nint, void>)funcTable[578])(stream, (nint)Utils.GetFunctionPointerForDelegate(callback));
+			((delegate* unmanaged[Cdecl]<AudioStream, nint, void>)funcTable[575])(stream, (nint)Utils.GetFunctionPointerForDelegate(callback));
 			#endif
 		}
 
@@ -3553,9 +3326,9 @@ namespace Hexa.NET.Raylib
 		internal static void AttachAudioStreamProcessorNative([NativeName(NativeNameType.Param, "stream")] [NativeName(NativeNameType.Type, "AudioStream")] AudioStream stream, [NativeName(NativeNameType.Param, "processor")] [NativeName(NativeNameType.Type, "AudioCallback")] AudioCallback processor)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<AudioStream, delegate*<void*, uint, void>, void>)funcTable[579])(stream, (delegate*<void*, uint, void>)Utils.GetFunctionPointerForDelegate(processor));
+			((delegate* unmanaged[Cdecl]<AudioStream, delegate*<void*, uint, void>, void>)funcTable[576])(stream, (delegate*<void*, uint, void>)Utils.GetFunctionPointerForDelegate(processor));
 			#else
-			((delegate* unmanaged[Cdecl]<AudioStream, nint, void>)funcTable[579])(stream, (nint)Utils.GetFunctionPointerForDelegate(processor));
+			((delegate* unmanaged[Cdecl]<AudioStream, nint, void>)funcTable[576])(stream, (nint)Utils.GetFunctionPointerForDelegate(processor));
 			#endif
 		}
 
@@ -3572,9 +3345,9 @@ namespace Hexa.NET.Raylib
 		internal static void DetachAudioStreamProcessorNative([NativeName(NativeNameType.Param, "stream")] [NativeName(NativeNameType.Type, "AudioStream")] AudioStream stream, [NativeName(NativeNameType.Param, "processor")] [NativeName(NativeNameType.Type, "AudioCallback")] AudioCallback processor)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<AudioStream, delegate*<void*, uint, void>, void>)funcTable[580])(stream, (delegate*<void*, uint, void>)Utils.GetFunctionPointerForDelegate(processor));
+			((delegate* unmanaged[Cdecl]<AudioStream, delegate*<void*, uint, void>, void>)funcTable[577])(stream, (delegate*<void*, uint, void>)Utils.GetFunctionPointerForDelegate(processor));
 			#else
-			((delegate* unmanaged[Cdecl]<AudioStream, nint, void>)funcTable[580])(stream, (nint)Utils.GetFunctionPointerForDelegate(processor));
+			((delegate* unmanaged[Cdecl]<AudioStream, nint, void>)funcTable[577])(stream, (nint)Utils.GetFunctionPointerForDelegate(processor));
 			#endif
 		}
 
@@ -3591,9 +3364,9 @@ namespace Hexa.NET.Raylib
 		internal static void AttachAudioMixedProcessorNative([NativeName(NativeNameType.Param, "processor")] [NativeName(NativeNameType.Type, "AudioCallback")] AudioCallback processor)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<delegate*<void*, uint, void>, void>)funcTable[581])((delegate*<void*, uint, void>)Utils.GetFunctionPointerForDelegate(processor));
+			((delegate* unmanaged[Cdecl]<delegate*<void*, uint, void>, void>)funcTable[578])((delegate*<void*, uint, void>)Utils.GetFunctionPointerForDelegate(processor));
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[581])((nint)Utils.GetFunctionPointerForDelegate(processor));
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[578])((nint)Utils.GetFunctionPointerForDelegate(processor));
 			#endif
 		}
 
@@ -3610,9 +3383,9 @@ namespace Hexa.NET.Raylib
 		internal static void DetachAudioMixedProcessorNative([NativeName(NativeNameType.Param, "processor")] [NativeName(NativeNameType.Type, "AudioCallback")] AudioCallback processor)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<delegate*<void*, uint, void>, void>)funcTable[582])((delegate*<void*, uint, void>)Utils.GetFunctionPointerForDelegate(processor));
+			((delegate* unmanaged[Cdecl]<delegate*<void*, uint, void>, void>)funcTable[579])((delegate*<void*, uint, void>)Utils.GetFunctionPointerForDelegate(processor));
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[582])((nint)Utils.GetFunctionPointerForDelegate(processor));
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[579])((nint)Utils.GetFunctionPointerForDelegate(processor));
 			#endif
 		}
 
@@ -3629,9 +3402,9 @@ namespace Hexa.NET.Raylib
 		internal static Vector3 GetCameraForwardNative([NativeName(NativeNameType.Param, "camera")] [NativeName(NativeNameType.Type, "Camera *")] Camera3D* camera)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Camera3D*, Vector3>)funcTable[583])(camera);
+			return ((delegate* unmanaged[Cdecl]<Camera3D*, Vector3>)funcTable[580])(camera);
 			#else
-			return (Vector3)((delegate* unmanaged[Cdecl]<nint, Vector3>)funcTable[583])((nint)camera);
+			return (Vector3)((delegate* unmanaged[Cdecl]<nint, Vector3>)funcTable[580])((nint)camera);
 			#endif
 		}
 
@@ -3660,9 +3433,9 @@ namespace Hexa.NET.Raylib
 		internal static Vector3 GetCameraUpNative([NativeName(NativeNameType.Param, "camera")] [NativeName(NativeNameType.Type, "Camera *")] Camera3D* camera)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Camera3D*, Vector3>)funcTable[584])(camera);
+			return ((delegate* unmanaged[Cdecl]<Camera3D*, Vector3>)funcTable[581])(camera);
 			#else
-			return (Vector3)((delegate* unmanaged[Cdecl]<nint, Vector3>)funcTable[584])((nint)camera);
+			return (Vector3)((delegate* unmanaged[Cdecl]<nint, Vector3>)funcTable[581])((nint)camera);
 			#endif
 		}
 
@@ -3691,9 +3464,9 @@ namespace Hexa.NET.Raylib
 		internal static Vector3 GetCameraRightNative([NativeName(NativeNameType.Param, "camera")] [NativeName(NativeNameType.Type, "Camera *")] Camera3D* camera)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Camera3D*, Vector3>)funcTable[585])(camera);
+			return ((delegate* unmanaged[Cdecl]<Camera3D*, Vector3>)funcTable[582])(camera);
 			#else
-			return (Vector3)((delegate* unmanaged[Cdecl]<nint, Vector3>)funcTable[585])((nint)camera);
+			return (Vector3)((delegate* unmanaged[Cdecl]<nint, Vector3>)funcTable[582])((nint)camera);
 			#endif
 		}
 
@@ -3725,9 +3498,9 @@ namespace Hexa.NET.Raylib
 		internal static void CameraMoveForwardNative([NativeName(NativeNameType.Param, "camera")] [NativeName(NativeNameType.Type, "Camera *")] Camera3D* camera, [NativeName(NativeNameType.Param, "distance")] [NativeName(NativeNameType.Type, "float")] float distance, [NativeName(NativeNameType.Param, "moveInWorldPlane")] [NativeName(NativeNameType.Type, "bool")] byte moveInWorldPlane)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Camera3D*, float, byte, void>)funcTable[586])(camera, distance, moveInWorldPlane);
+			((delegate* unmanaged[Cdecl]<Camera3D*, float, byte, void>)funcTable[583])(camera, distance, moveInWorldPlane);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, float, byte, void>)funcTable[586])((nint)camera, distance, moveInWorldPlane);
+			((delegate* unmanaged[Cdecl]<nint, float, byte, void>)funcTable[583])((nint)camera, distance, moveInWorldPlane);
 			#endif
 		}
 
@@ -3760,9 +3533,9 @@ namespace Hexa.NET.Raylib
 		internal static void CameraMoveUpNative([NativeName(NativeNameType.Param, "camera")] [NativeName(NativeNameType.Type, "Camera *")] Camera3D* camera, [NativeName(NativeNameType.Param, "distance")] [NativeName(NativeNameType.Type, "float")] float distance)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Camera3D*, float, void>)funcTable[587])(camera, distance);
+			((delegate* unmanaged[Cdecl]<Camera3D*, float, void>)funcTable[584])(camera, distance);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, float, void>)funcTable[587])((nint)camera, distance);
+			((delegate* unmanaged[Cdecl]<nint, float, void>)funcTable[584])((nint)camera, distance);
 			#endif
 		}
 
@@ -3789,9 +3562,9 @@ namespace Hexa.NET.Raylib
 		internal static void CameraMoveRightNative([NativeName(NativeNameType.Param, "camera")] [NativeName(NativeNameType.Type, "Camera *")] Camera3D* camera, [NativeName(NativeNameType.Param, "distance")] [NativeName(NativeNameType.Type, "float")] float distance, [NativeName(NativeNameType.Param, "moveInWorldPlane")] [NativeName(NativeNameType.Type, "bool")] byte moveInWorldPlane)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Camera3D*, float, byte, void>)funcTable[588])(camera, distance, moveInWorldPlane);
+			((delegate* unmanaged[Cdecl]<Camera3D*, float, byte, void>)funcTable[585])(camera, distance, moveInWorldPlane);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, float, byte, void>)funcTable[588])((nint)camera, distance, moveInWorldPlane);
+			((delegate* unmanaged[Cdecl]<nint, float, byte, void>)funcTable[585])((nint)camera, distance, moveInWorldPlane);
 			#endif
 		}
 
@@ -3818,9 +3591,9 @@ namespace Hexa.NET.Raylib
 		internal static void CameraMoveToTargetNative([NativeName(NativeNameType.Param, "camera")] [NativeName(NativeNameType.Type, "Camera *")] Camera3D* camera, [NativeName(NativeNameType.Param, "delta")] [NativeName(NativeNameType.Type, "float")] float delta)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Camera3D*, float, void>)funcTable[589])(camera, delta);
+			((delegate* unmanaged[Cdecl]<Camera3D*, float, void>)funcTable[586])(camera, delta);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, float, void>)funcTable[589])((nint)camera, delta);
+			((delegate* unmanaged[Cdecl]<nint, float, void>)funcTable[586])((nint)camera, delta);
 			#endif
 		}
 
@@ -3850,9 +3623,9 @@ namespace Hexa.NET.Raylib
 		internal static void CameraYawNative([NativeName(NativeNameType.Param, "camera")] [NativeName(NativeNameType.Type, "Camera *")] Camera3D* camera, [NativeName(NativeNameType.Param, "angle")] [NativeName(NativeNameType.Type, "float")] float angle, [NativeName(NativeNameType.Param, "rotateAroundTarget")] [NativeName(NativeNameType.Type, "bool")] byte rotateAroundTarget)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Camera3D*, float, byte, void>)funcTable[590])(camera, angle, rotateAroundTarget);
+			((delegate* unmanaged[Cdecl]<Camera3D*, float, byte, void>)funcTable[587])(camera, angle, rotateAroundTarget);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, float, byte, void>)funcTable[590])((nint)camera, angle, rotateAroundTarget);
+			((delegate* unmanaged[Cdecl]<nint, float, byte, void>)funcTable[587])((nint)camera, angle, rotateAroundTarget);
 			#endif
 		}
 
@@ -3885,9 +3658,9 @@ namespace Hexa.NET.Raylib
 		internal static void CameraPitchNative([NativeName(NativeNameType.Param, "camera")] [NativeName(NativeNameType.Type, "Camera *")] Camera3D* camera, [NativeName(NativeNameType.Param, "angle")] [NativeName(NativeNameType.Type, "float")] float angle, [NativeName(NativeNameType.Param, "lockView")] [NativeName(NativeNameType.Type, "bool")] byte lockView, [NativeName(NativeNameType.Param, "rotateAroundTarget")] [NativeName(NativeNameType.Type, "bool")] byte rotateAroundTarget, [NativeName(NativeNameType.Param, "rotateUp")] [NativeName(NativeNameType.Type, "bool")] byte rotateUp)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Camera3D*, float, byte, byte, byte, void>)funcTable[591])(camera, angle, lockView, rotateAroundTarget, rotateUp);
+			((delegate* unmanaged[Cdecl]<Camera3D*, float, byte, byte, byte, void>)funcTable[588])(camera, angle, lockView, rotateAroundTarget, rotateUp);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, float, byte, byte, byte, void>)funcTable[591])((nint)camera, angle, lockView, rotateAroundTarget, rotateUp);
+			((delegate* unmanaged[Cdecl]<nint, float, byte, byte, byte, void>)funcTable[588])((nint)camera, angle, lockView, rotateAroundTarget, rotateUp);
 			#endif
 		}
 
@@ -3914,9 +3687,9 @@ namespace Hexa.NET.Raylib
 		internal static void CameraRollNative([NativeName(NativeNameType.Param, "camera")] [NativeName(NativeNameType.Type, "Camera *")] Camera3D* camera, [NativeName(NativeNameType.Param, "angle")] [NativeName(NativeNameType.Type, "float")] float angle)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<Camera3D*, float, void>)funcTable[592])(camera, angle);
+			((delegate* unmanaged[Cdecl]<Camera3D*, float, void>)funcTable[589])(camera, angle);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, float, void>)funcTable[592])((nint)camera, angle);
+			((delegate* unmanaged[Cdecl]<nint, float, void>)funcTable[589])((nint)camera, angle);
 			#endif
 		}
 
@@ -3943,9 +3716,9 @@ namespace Hexa.NET.Raylib
 		internal static Matrix4x4 GetCameraViewMatrixNative([NativeName(NativeNameType.Param, "camera")] [NativeName(NativeNameType.Type, "Camera *")] Camera3D* camera)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Camera3D*, Matrix4x4>)funcTable[593])(camera);
+			return ((delegate* unmanaged[Cdecl]<Camera3D*, Matrix4x4>)funcTable[590])(camera);
 			#else
-			return (Matrix4x4)((delegate* unmanaged[Cdecl]<nint, Matrix4x4>)funcTable[593])((nint)camera);
+			return (Matrix4x4)((delegate* unmanaged[Cdecl]<nint, Matrix4x4>)funcTable[590])((nint)camera);
 			#endif
 		}
 
@@ -3974,9 +3747,9 @@ namespace Hexa.NET.Raylib
 		internal static Matrix4x4 GetCameraProjectionMatrixNative([NativeName(NativeNameType.Param, "camera")] [NativeName(NativeNameType.Type, "Camera *")] Camera3D* camera, [NativeName(NativeNameType.Param, "aspect")] [NativeName(NativeNameType.Type, "float")] float aspect)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Camera3D*, float, Matrix4x4>)funcTable[594])(camera, aspect);
+			return ((delegate* unmanaged[Cdecl]<Camera3D*, float, Matrix4x4>)funcTable[591])(camera, aspect);
 			#else
-			return (Matrix4x4)((delegate* unmanaged[Cdecl]<nint, float, Matrix4x4>)funcTable[594])((nint)camera, aspect);
+			return (Matrix4x4)((delegate* unmanaged[Cdecl]<nint, float, Matrix4x4>)funcTable[591])((nint)camera, aspect);
 			#endif
 		}
 
@@ -4005,9 +3778,9 @@ namespace Hexa.NET.Raylib
 		internal static void ProcessGestureEventNative([NativeName(NativeNameType.Param, "event")] [NativeName(NativeNameType.Type, "GestureEvent")] GestureEvent evnt)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<GestureEvent, void>)funcTable[595])(evnt);
+			((delegate* unmanaged[Cdecl]<GestureEvent, void>)funcTable[592])(evnt);
 			#else
-			((delegate* unmanaged[Cdecl]<GestureEvent, void>)funcTable[595])(evnt);
+			((delegate* unmanaged[Cdecl]<GestureEvent, void>)funcTable[592])(evnt);
 			#endif
 		}
 
@@ -4024,9 +3797,9 @@ namespace Hexa.NET.Raylib
 		internal static void UpdateGesturesNative()
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<void>)funcTable[596])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[593])();
 			#else
-			((delegate* unmanaged[Cdecl]<void>)funcTable[596])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[593])();
 			#endif
 		}
 
@@ -4043,9 +3816,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlMatrixModeNative([NativeName(NativeNameType.Param, "mode")] [NativeName(NativeNameType.Type, "int")] int mode)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<int, void>)funcTable[597])(mode);
+			((delegate* unmanaged[Cdecl]<int, void>)funcTable[594])(mode);
 			#else
-			((delegate* unmanaged[Cdecl]<int, void>)funcTable[597])(mode);
+			((delegate* unmanaged[Cdecl]<int, void>)funcTable[594])(mode);
 			#endif
 		}
 
@@ -4062,9 +3835,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlPushMatrixNative()
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<void>)funcTable[598])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[595])();
 			#else
-			((delegate* unmanaged[Cdecl]<void>)funcTable[598])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[595])();
 			#endif
 		}
 
@@ -4081,9 +3854,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlPopMatrixNative()
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<void>)funcTable[599])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[596])();
 			#else
-			((delegate* unmanaged[Cdecl]<void>)funcTable[599])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[596])();
 			#endif
 		}
 
@@ -4100,9 +3873,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlLoadIdentityNative()
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<void>)funcTable[600])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[597])();
 			#else
-			((delegate* unmanaged[Cdecl]<void>)funcTable[600])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[597])();
 			#endif
 		}
 
@@ -4119,9 +3892,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlTranslatefNative([NativeName(NativeNameType.Param, "x")] [NativeName(NativeNameType.Type, "float")] float x, [NativeName(NativeNameType.Param, "y")] [NativeName(NativeNameType.Type, "float")] float y, [NativeName(NativeNameType.Param, "z")] [NativeName(NativeNameType.Type, "float")] float z)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[601])(x, y, z);
+			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[598])(x, y, z);
 			#else
-			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[601])(x, y, z);
+			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[598])(x, y, z);
 			#endif
 		}
 
@@ -4138,9 +3911,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlRotatefNative([NativeName(NativeNameType.Param, "angle")] [NativeName(NativeNameType.Type, "float")] float angle, [NativeName(NativeNameType.Param, "x")] [NativeName(NativeNameType.Type, "float")] float x, [NativeName(NativeNameType.Param, "y")] [NativeName(NativeNameType.Type, "float")] float y, [NativeName(NativeNameType.Param, "z")] [NativeName(NativeNameType.Type, "float")] float z)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<float, float, float, float, void>)funcTable[602])(angle, x, y, z);
+			((delegate* unmanaged[Cdecl]<float, float, float, float, void>)funcTable[599])(angle, x, y, z);
 			#else
-			((delegate* unmanaged[Cdecl]<float, float, float, float, void>)funcTable[602])(angle, x, y, z);
+			((delegate* unmanaged[Cdecl]<float, float, float, float, void>)funcTable[599])(angle, x, y, z);
 			#endif
 		}
 
@@ -4157,9 +3930,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlScalefNative([NativeName(NativeNameType.Param, "x")] [NativeName(NativeNameType.Type, "float")] float x, [NativeName(NativeNameType.Param, "y")] [NativeName(NativeNameType.Type, "float")] float y, [NativeName(NativeNameType.Param, "z")] [NativeName(NativeNameType.Type, "float")] float z)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[603])(x, y, z);
+			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[600])(x, y, z);
 			#else
-			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[603])(x, y, z);
+			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[600])(x, y, z);
 			#endif
 		}
 
@@ -4176,9 +3949,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlMultMatrixfNative([NativeName(NativeNameType.Param, "matf")] [NativeName(NativeNameType.Type, "float const *")] float* matf)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<float*, void>)funcTable[604])(matf);
+			((delegate* unmanaged[Cdecl]<float*, void>)funcTable[601])(matf);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[604])((nint)matf);
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[601])((nint)matf);
 			#endif
 		}
 
@@ -4205,9 +3978,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlFrustumNative([NativeName(NativeNameType.Param, "left")] [NativeName(NativeNameType.Type, "double")] double left, [NativeName(NativeNameType.Param, "right")] [NativeName(NativeNameType.Type, "double")] double right, [NativeName(NativeNameType.Param, "bottom")] [NativeName(NativeNameType.Type, "double")] double bottom, [NativeName(NativeNameType.Param, "top")] [NativeName(NativeNameType.Type, "double")] double top, [NativeName(NativeNameType.Param, "znear")] [NativeName(NativeNameType.Type, "double")] double znear, [NativeName(NativeNameType.Param, "zfar")] [NativeName(NativeNameType.Type, "double")] double zfar)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<double, double, double, double, double, double, void>)funcTable[605])(left, right, bottom, top, znear, zfar);
+			((delegate* unmanaged[Cdecl]<double, double, double, double, double, double, void>)funcTable[602])(left, right, bottom, top, znear, zfar);
 			#else
-			((delegate* unmanaged[Cdecl]<double, double, double, double, double, double, void>)funcTable[605])(left, right, bottom, top, znear, zfar);
+			((delegate* unmanaged[Cdecl]<double, double, double, double, double, double, void>)funcTable[602])(left, right, bottom, top, znear, zfar);
 			#endif
 		}
 
@@ -4224,9 +3997,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlOrthoNative([NativeName(NativeNameType.Param, "left")] [NativeName(NativeNameType.Type, "double")] double left, [NativeName(NativeNameType.Param, "right")] [NativeName(NativeNameType.Type, "double")] double right, [NativeName(NativeNameType.Param, "bottom")] [NativeName(NativeNameType.Type, "double")] double bottom, [NativeName(NativeNameType.Param, "top")] [NativeName(NativeNameType.Type, "double")] double top, [NativeName(NativeNameType.Param, "znear")] [NativeName(NativeNameType.Type, "double")] double znear, [NativeName(NativeNameType.Param, "zfar")] [NativeName(NativeNameType.Type, "double")] double zfar)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<double, double, double, double, double, double, void>)funcTable[606])(left, right, bottom, top, znear, zfar);
+			((delegate* unmanaged[Cdecl]<double, double, double, double, double, double, void>)funcTable[603])(left, right, bottom, top, znear, zfar);
 			#else
-			((delegate* unmanaged[Cdecl]<double, double, double, double, double, double, void>)funcTable[606])(left, right, bottom, top, znear, zfar);
+			((delegate* unmanaged[Cdecl]<double, double, double, double, double, double, void>)funcTable[603])(left, right, bottom, top, znear, zfar);
 			#endif
 		}
 
@@ -4243,9 +4016,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlViewportNative([NativeName(NativeNameType.Param, "x")] [NativeName(NativeNameType.Type, "int")] int x, [NativeName(NativeNameType.Param, "y")] [NativeName(NativeNameType.Type, "int")] int y, [NativeName(NativeNameType.Param, "width")] [NativeName(NativeNameType.Type, "int")] int width, [NativeName(NativeNameType.Param, "height")] [NativeName(NativeNameType.Type, "int")] int height)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<int, int, int, int, void>)funcTable[607])(x, y, width, height);
+			((delegate* unmanaged[Cdecl]<int, int, int, int, void>)funcTable[604])(x, y, width, height);
 			#else
-			((delegate* unmanaged[Cdecl]<int, int, int, int, void>)funcTable[607])(x, y, width, height);
+			((delegate* unmanaged[Cdecl]<int, int, int, int, void>)funcTable[604])(x, y, width, height);
 			#endif
 		}
 
@@ -4262,9 +4035,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlSetClipPlanesNative([NativeName(NativeNameType.Param, "nearPlane")] [NativeName(NativeNameType.Type, "double")] double nearPlane, [NativeName(NativeNameType.Param, "farPlane")] [NativeName(NativeNameType.Type, "double")] double farPlane)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<double, double, void>)funcTable[608])(nearPlane, farPlane);
+			((delegate* unmanaged[Cdecl]<double, double, void>)funcTable[605])(nearPlane, farPlane);
 			#else
-			((delegate* unmanaged[Cdecl]<double, double, void>)funcTable[608])(nearPlane, farPlane);
+			((delegate* unmanaged[Cdecl]<double, double, void>)funcTable[605])(nearPlane, farPlane);
 			#endif
 		}
 
@@ -4281,9 +4054,9 @@ namespace Hexa.NET.Raylib
 		internal static double RlGetCullDistanceNearNative()
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<double>)funcTable[609])();
+			return ((delegate* unmanaged[Cdecl]<double>)funcTable[606])();
 			#else
-			return (double)((delegate* unmanaged[Cdecl]<double>)funcTable[609])();
+			return (double)((delegate* unmanaged[Cdecl]<double>)funcTable[606])();
 			#endif
 		}
 
@@ -4301,9 +4074,9 @@ namespace Hexa.NET.Raylib
 		internal static double RlGetCullDistanceFarNative()
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<double>)funcTable[610])();
+			return ((delegate* unmanaged[Cdecl]<double>)funcTable[607])();
 			#else
-			return (double)((delegate* unmanaged[Cdecl]<double>)funcTable[610])();
+			return (double)((delegate* unmanaged[Cdecl]<double>)funcTable[607])();
 			#endif
 		}
 
@@ -4326,9 +4099,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlBeginNative([NativeName(NativeNameType.Param, "mode")] [NativeName(NativeNameType.Type, "int")] int mode)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<int, void>)funcTable[611])(mode);
+			((delegate* unmanaged[Cdecl]<int, void>)funcTable[608])(mode);
 			#else
-			((delegate* unmanaged[Cdecl]<int, void>)funcTable[611])(mode);
+			((delegate* unmanaged[Cdecl]<int, void>)funcTable[608])(mode);
 			#endif
 		}
 
@@ -4350,9 +4123,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlEndNative()
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<void>)funcTable[612])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[609])();
 			#else
-			((delegate* unmanaged[Cdecl]<void>)funcTable[612])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[609])();
 			#endif
 		}
 
@@ -4369,9 +4142,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlVertex2INative([NativeName(NativeNameType.Param, "x")] [NativeName(NativeNameType.Type, "int")] int x, [NativeName(NativeNameType.Param, "y")] [NativeName(NativeNameType.Type, "int")] int y)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<int, int, void>)funcTable[613])(x, y);
+			((delegate* unmanaged[Cdecl]<int, int, void>)funcTable[610])(x, y);
 			#else
-			((delegate* unmanaged[Cdecl]<int, int, void>)funcTable[613])(x, y);
+			((delegate* unmanaged[Cdecl]<int, int, void>)funcTable[610])(x, y);
 			#endif
 		}
 
@@ -4388,9 +4161,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlVertex2FNative([NativeName(NativeNameType.Param, "x")] [NativeName(NativeNameType.Type, "float")] float x, [NativeName(NativeNameType.Param, "y")] [NativeName(NativeNameType.Type, "float")] float y)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<float, float, void>)funcTable[614])(x, y);
+			((delegate* unmanaged[Cdecl]<float, float, void>)funcTable[611])(x, y);
 			#else
-			((delegate* unmanaged[Cdecl]<float, float, void>)funcTable[614])(x, y);
+			((delegate* unmanaged[Cdecl]<float, float, void>)funcTable[611])(x, y);
 			#endif
 		}
 
@@ -4407,9 +4180,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlVertex3FNative([NativeName(NativeNameType.Param, "x")] [NativeName(NativeNameType.Type, "float")] float x, [NativeName(NativeNameType.Param, "y")] [NativeName(NativeNameType.Type, "float")] float y, [NativeName(NativeNameType.Param, "z")] [NativeName(NativeNameType.Type, "float")] float z)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[615])(x, y, z);
+			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[612])(x, y, z);
 			#else
-			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[615])(x, y, z);
+			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[612])(x, y, z);
 			#endif
 		}
 
@@ -4426,9 +4199,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlTexCoord2FNative([NativeName(NativeNameType.Param, "x")] [NativeName(NativeNameType.Type, "float")] float x, [NativeName(NativeNameType.Param, "y")] [NativeName(NativeNameType.Type, "float")] float y)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<float, float, void>)funcTable[616])(x, y);
+			((delegate* unmanaged[Cdecl]<float, float, void>)funcTable[613])(x, y);
 			#else
-			((delegate* unmanaged[Cdecl]<float, float, void>)funcTable[616])(x, y);
+			((delegate* unmanaged[Cdecl]<float, float, void>)funcTable[613])(x, y);
 			#endif
 		}
 
@@ -4445,9 +4218,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlNormal3FNative([NativeName(NativeNameType.Param, "x")] [NativeName(NativeNameType.Type, "float")] float x, [NativeName(NativeNameType.Param, "y")] [NativeName(NativeNameType.Type, "float")] float y, [NativeName(NativeNameType.Param, "z")] [NativeName(NativeNameType.Type, "float")] float z)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[617])(x, y, z);
+			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[614])(x, y, z);
 			#else
-			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[617])(x, y, z);
+			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[614])(x, y, z);
 			#endif
 		}
 
@@ -4464,9 +4237,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlColor4UbNative([NativeName(NativeNameType.Param, "r")] [NativeName(NativeNameType.Type, "unsigned char")] byte r, [NativeName(NativeNameType.Param, "g")] [NativeName(NativeNameType.Type, "unsigned char")] byte g, [NativeName(NativeNameType.Param, "b")] [NativeName(NativeNameType.Type, "unsigned char")] byte b, [NativeName(NativeNameType.Param, "a")] [NativeName(NativeNameType.Type, "unsigned char")] byte a)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<byte, byte, byte, byte, void>)funcTable[618])(r, g, b, a);
+			((delegate* unmanaged[Cdecl]<byte, byte, byte, byte, void>)funcTable[615])(r, g, b, a);
 			#else
-			((delegate* unmanaged[Cdecl]<byte, byte, byte, byte, void>)funcTable[618])(r, g, b, a);
+			((delegate* unmanaged[Cdecl]<byte, byte, byte, byte, void>)funcTable[615])(r, g, b, a);
 			#endif
 		}
 
@@ -4483,9 +4256,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlColor3FNative([NativeName(NativeNameType.Param, "x")] [NativeName(NativeNameType.Type, "float")] float x, [NativeName(NativeNameType.Param, "y")] [NativeName(NativeNameType.Type, "float")] float y, [NativeName(NativeNameType.Param, "z")] [NativeName(NativeNameType.Type, "float")] float z)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[619])(x, y, z);
+			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[616])(x, y, z);
 			#else
-			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[619])(x, y, z);
+			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[616])(x, y, z);
 			#endif
 		}
 
@@ -4502,9 +4275,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlColor4FNative([NativeName(NativeNameType.Param, "x")] [NativeName(NativeNameType.Type, "float")] float x, [NativeName(NativeNameType.Param, "y")] [NativeName(NativeNameType.Type, "float")] float y, [NativeName(NativeNameType.Param, "z")] [NativeName(NativeNameType.Type, "float")] float z, [NativeName(NativeNameType.Param, "w")] [NativeName(NativeNameType.Type, "float")] float w)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<float, float, float, float, void>)funcTable[620])(x, y, z, w);
+			((delegate* unmanaged[Cdecl]<float, float, float, float, void>)funcTable[617])(x, y, z, w);
 			#else
-			((delegate* unmanaged[Cdecl]<float, float, float, float, void>)funcTable[620])(x, y, z, w);
+			((delegate* unmanaged[Cdecl]<float, float, float, float, void>)funcTable[617])(x, y, z, w);
 			#endif
 		}
 
@@ -4524,9 +4297,9 @@ namespace Hexa.NET.Raylib
 		internal static byte RlEnableVertexArrayNative([NativeName(NativeNameType.Param, "vaoId")] [NativeName(NativeNameType.Type, "unsigned int")] uint vaoId)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<uint, byte>)funcTable[621])(vaoId);
+			return ((delegate* unmanaged[Cdecl]<uint, byte>)funcTable[618])(vaoId);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<uint, byte>)funcTable[621])(vaoId);
+			return (byte)((delegate* unmanaged[Cdecl]<uint, byte>)funcTable[618])(vaoId);
 			#endif
 		}
 
@@ -4547,9 +4320,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlDisableVertexArrayNative()
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<void>)funcTable[622])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[619])();
 			#else
-			((delegate* unmanaged[Cdecl]<void>)funcTable[622])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[619])();
 			#endif
 		}
 
@@ -4566,9 +4339,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlEnableVertexBufferNative([NativeName(NativeNameType.Param, "id")] [NativeName(NativeNameType.Type, "unsigned int")] uint id)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[623])(id);
+			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[620])(id);
 			#else
-			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[623])(id);
+			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[620])(id);
 			#endif
 		}
 
@@ -4585,9 +4358,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlDisableVertexBufferNative()
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<void>)funcTable[624])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[621])();
 			#else
-			((delegate* unmanaged[Cdecl]<void>)funcTable[624])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[621])();
 			#endif
 		}
 
@@ -4604,9 +4377,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlEnableVertexBufferElementNative([NativeName(NativeNameType.Param, "id")] [NativeName(NativeNameType.Type, "unsigned int")] uint id)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[625])(id);
+			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[622])(id);
 			#else
-			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[625])(id);
+			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[622])(id);
 			#endif
 		}
 
@@ -4623,9 +4396,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlDisableVertexBufferElementNative()
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<void>)funcTable[626])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[623])();
 			#else
-			((delegate* unmanaged[Cdecl]<void>)funcTable[626])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[623])();
 			#endif
 		}
 
@@ -4642,9 +4415,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlEnableVertexAttributeNative([NativeName(NativeNameType.Param, "index")] [NativeName(NativeNameType.Type, "unsigned int")] uint index)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[627])(index);
+			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[624])(index);
 			#else
-			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[627])(index);
+			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[624])(index);
 			#endif
 		}
 
@@ -4661,9 +4434,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlDisableVertexAttributeNative([NativeName(NativeNameType.Param, "index")] [NativeName(NativeNameType.Type, "unsigned int")] uint index)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[628])(index);
+			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[625])(index);
 			#else
-			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[628])(index);
+			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[625])(index);
 			#endif
 		}
 
@@ -4683,9 +4456,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlActiveTextureSlotNative([NativeName(NativeNameType.Param, "slot")] [NativeName(NativeNameType.Type, "int")] int slot)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<int, void>)funcTable[629])(slot);
+			((delegate* unmanaged[Cdecl]<int, void>)funcTable[626])(slot);
 			#else
-			((delegate* unmanaged[Cdecl]<int, void>)funcTable[629])(slot);
+			((delegate* unmanaged[Cdecl]<int, void>)funcTable[626])(slot);
 			#endif
 		}
 
@@ -4705,9 +4478,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlEnableTextureNative([NativeName(NativeNameType.Param, "id")] [NativeName(NativeNameType.Type, "unsigned int")] uint id)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[630])(id);
+			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[627])(id);
 			#else
-			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[630])(id);
+			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[627])(id);
 			#endif
 		}
 
@@ -4724,9 +4497,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlDisableTextureNative()
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<void>)funcTable[631])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[628])();
 			#else
-			((delegate* unmanaged[Cdecl]<void>)funcTable[631])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[628])();
 			#endif
 		}
 
@@ -4743,9 +4516,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlEnableTextureCubemapNative([NativeName(NativeNameType.Param, "id")] [NativeName(NativeNameType.Type, "unsigned int")] uint id)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[632])(id);
+			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[629])(id);
 			#else
-			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[632])(id);
+			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[629])(id);
 			#endif
 		}
 
@@ -4762,9 +4535,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlDisableTextureCubemapNative()
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<void>)funcTable[633])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[630])();
 			#else
-			((delegate* unmanaged[Cdecl]<void>)funcTable[633])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[630])();
 			#endif
 		}
 
@@ -4781,9 +4554,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlTextureParametersNative([NativeName(NativeNameType.Param, "id")] [NativeName(NativeNameType.Type, "unsigned int")] uint id, [NativeName(NativeNameType.Param, "param")] [NativeName(NativeNameType.Type, "int")] int param, [NativeName(NativeNameType.Param, "value")] [NativeName(NativeNameType.Type, "int")] int value)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<uint, int, int, void>)funcTable[634])(id, param, value);
+			((delegate* unmanaged[Cdecl]<uint, int, int, void>)funcTable[631])(id, param, value);
 			#else
-			((delegate* unmanaged[Cdecl]<uint, int, int, void>)funcTable[634])(id, param, value);
+			((delegate* unmanaged[Cdecl]<uint, int, int, void>)funcTable[631])(id, param, value);
 			#endif
 		}
 
@@ -4800,9 +4573,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlCubemapParametersNative([NativeName(NativeNameType.Param, "id")] [NativeName(NativeNameType.Type, "unsigned int")] uint id, [NativeName(NativeNameType.Param, "param")] [NativeName(NativeNameType.Type, "int")] int param, [NativeName(NativeNameType.Param, "value")] [NativeName(NativeNameType.Type, "int")] int value)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<uint, int, int, void>)funcTable[635])(id, param, value);
+			((delegate* unmanaged[Cdecl]<uint, int, int, void>)funcTable[632])(id, param, value);
 			#else
-			((delegate* unmanaged[Cdecl]<uint, int, int, void>)funcTable[635])(id, param, value);
+			((delegate* unmanaged[Cdecl]<uint, int, int, void>)funcTable[632])(id, param, value);
 			#endif
 		}
 
@@ -4822,9 +4595,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlEnableShaderNative([NativeName(NativeNameType.Param, "id")] [NativeName(NativeNameType.Type, "unsigned int")] uint id)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[636])(id);
+			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[633])(id);
 			#else
-			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[636])(id);
+			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[633])(id);
 			#endif
 		}
 
@@ -4844,9 +4617,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlDisableShaderNative()
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<void>)funcTable[637])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[634])();
 			#else
-			((delegate* unmanaged[Cdecl]<void>)funcTable[637])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[634])();
 			#endif
 		}
 
@@ -4866,9 +4639,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlEnableFramebufferNative([NativeName(NativeNameType.Param, "id")] [NativeName(NativeNameType.Type, "unsigned int")] uint id)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[638])(id);
+			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[635])(id);
 			#else
-			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[638])(id);
+			((delegate* unmanaged[Cdecl]<uint, void>)funcTable[635])(id);
 			#endif
 		}
 
@@ -4888,9 +4661,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlDisableFramebufferNative()
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<void>)funcTable[639])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[636])();
 			#else
-			((delegate* unmanaged[Cdecl]<void>)funcTable[639])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[636])();
 			#endif
 		}
 
@@ -4907,9 +4680,9 @@ namespace Hexa.NET.Raylib
 		internal static uint RlGetActiveFramebufferNative()
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<uint>)funcTable[640])();
+			return ((delegate* unmanaged[Cdecl]<uint>)funcTable[637])();
 			#else
-			return (uint)((delegate* unmanaged[Cdecl]<uint>)funcTable[640])();
+			return (uint)((delegate* unmanaged[Cdecl]<uint>)funcTable[637])();
 			#endif
 		}
 
@@ -4927,9 +4700,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlActiveDrawBuffersNative([NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<int, void>)funcTable[641])(count);
+			((delegate* unmanaged[Cdecl]<int, void>)funcTable[638])(count);
 			#else
-			((delegate* unmanaged[Cdecl]<int, void>)funcTable[641])(count);
+			((delegate* unmanaged[Cdecl]<int, void>)funcTable[638])(count);
 			#endif
 		}
 
@@ -4946,9 +4719,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlBlitFramebufferNative([NativeName(NativeNameType.Param, "srcX")] [NativeName(NativeNameType.Type, "int")] int srcX, [NativeName(NativeNameType.Param, "srcY")] [NativeName(NativeNameType.Type, "int")] int srcY, [NativeName(NativeNameType.Param, "srcWidth")] [NativeName(NativeNameType.Type, "int")] int srcWidth, [NativeName(NativeNameType.Param, "srcHeight")] [NativeName(NativeNameType.Type, "int")] int srcHeight, [NativeName(NativeNameType.Param, "dstX")] [NativeName(NativeNameType.Type, "int")] int dstX, [NativeName(NativeNameType.Param, "dstY")] [NativeName(NativeNameType.Type, "int")] int dstY, [NativeName(NativeNameType.Param, "dstWidth")] [NativeName(NativeNameType.Type, "int")] int dstWidth, [NativeName(NativeNameType.Param, "dstHeight")] [NativeName(NativeNameType.Type, "int")] int dstHeight, [NativeName(NativeNameType.Param, "bufferMask")] [NativeName(NativeNameType.Type, "int")] int bufferMask)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<int, int, int, int, int, int, int, int, int, void>)funcTable[642])(srcX, srcY, srcWidth, srcHeight, dstX, dstY, dstWidth, dstHeight, bufferMask);
+			((delegate* unmanaged[Cdecl]<int, int, int, int, int, int, int, int, int, void>)funcTable[639])(srcX, srcY, srcWidth, srcHeight, dstX, dstY, dstWidth, dstHeight, bufferMask);
 			#else
-			((delegate* unmanaged[Cdecl]<int, int, int, int, int, int, int, int, int, void>)funcTable[642])(srcX, srcY, srcWidth, srcHeight, dstX, dstY, dstWidth, dstHeight, bufferMask);
+			((delegate* unmanaged[Cdecl]<int, int, int, int, int, int, int, int, int, void>)funcTable[639])(srcX, srcY, srcWidth, srcHeight, dstX, dstY, dstWidth, dstHeight, bufferMask);
 			#endif
 		}
 
@@ -4965,9 +4738,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlBindFramebufferNative([NativeName(NativeNameType.Param, "target")] [NativeName(NativeNameType.Type, "unsigned int")] uint target, [NativeName(NativeNameType.Param, "framebuffer")] [NativeName(NativeNameType.Type, "unsigned int")] uint framebuffer)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<uint, uint, void>)funcTable[643])(target, framebuffer);
+			((delegate* unmanaged[Cdecl]<uint, uint, void>)funcTable[640])(target, framebuffer);
 			#else
-			((delegate* unmanaged[Cdecl]<uint, uint, void>)funcTable[643])(target, framebuffer);
+			((delegate* unmanaged[Cdecl]<uint, uint, void>)funcTable[640])(target, framebuffer);
 			#endif
 		}
 
@@ -4987,9 +4760,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlEnableColorBlendNative()
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<void>)funcTable[644])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[641])();
 			#else
-			((delegate* unmanaged[Cdecl]<void>)funcTable[644])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[641])();
 			#endif
 		}
 
@@ -5009,9 +4782,9 @@ namespace Hexa.NET.Raylib
 		internal static void RlDisableColorBlendNative()
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<void>)funcTable[645])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[642])();
 			#else
-			((delegate* unmanaged[Cdecl]<void>)funcTable[645])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[642])();
 			#endif
 		}
 
@@ -5020,6 +4793,234 @@ namespace Hexa.NET.Raylib
 		public static void RlDisableColorBlend()
 		{
 			RlDisableColorBlendNative();
+		}
+
+		[NativeName(NativeNameType.Func, "rlEnableDepthTest")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void RlEnableDepthTestNative()
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<void>)funcTable[643])();
+			#else
+			((delegate* unmanaged[Cdecl]<void>)funcTable[643])();
+			#endif
+		}
+
+		[NativeName(NativeNameType.Func, "rlEnableDepthTest")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void RlEnableDepthTest()
+		{
+			RlEnableDepthTestNative();
+		}
+
+		[NativeName(NativeNameType.Func, "rlDisableDepthTest")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void RlDisableDepthTestNative()
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<void>)funcTable[644])();
+			#else
+			((delegate* unmanaged[Cdecl]<void>)funcTable[644])();
+			#endif
+		}
+
+		[NativeName(NativeNameType.Func, "rlDisableDepthTest")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void RlDisableDepthTest()
+		{
+			RlDisableDepthTestNative();
+		}
+
+		[NativeName(NativeNameType.Func, "rlEnableDepthMask")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void RlEnableDepthMaskNative()
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<void>)funcTable[645])();
+			#else
+			((delegate* unmanaged[Cdecl]<void>)funcTable[645])();
+			#endif
+		}
+
+		[NativeName(NativeNameType.Func, "rlEnableDepthMask")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void RlEnableDepthMask()
+		{
+			RlEnableDepthMaskNative();
+		}
+
+		[NativeName(NativeNameType.Func, "rlDisableDepthMask")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void RlDisableDepthMaskNative()
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<void>)funcTable[646])();
+			#else
+			((delegate* unmanaged[Cdecl]<void>)funcTable[646])();
+			#endif
+		}
+
+		[NativeName(NativeNameType.Func, "rlDisableDepthMask")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void RlDisableDepthMask()
+		{
+			RlDisableDepthMaskNative();
+		}
+
+		[NativeName(NativeNameType.Func, "rlEnableBackfaceCulling")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void RlEnableBackfaceCullingNative()
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<void>)funcTable[647])();
+			#else
+			((delegate* unmanaged[Cdecl]<void>)funcTable[647])();
+			#endif
+		}
+
+		[NativeName(NativeNameType.Func, "rlEnableBackfaceCulling")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void RlEnableBackfaceCulling()
+		{
+			RlEnableBackfaceCullingNative();
+		}
+
+		[NativeName(NativeNameType.Func, "rlDisableBackfaceCulling")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void RlDisableBackfaceCullingNative()
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<void>)funcTable[648])();
+			#else
+			((delegate* unmanaged[Cdecl]<void>)funcTable[648])();
+			#endif
+		}
+
+		[NativeName(NativeNameType.Func, "rlDisableBackfaceCulling")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void RlDisableBackfaceCulling()
+		{
+			RlDisableBackfaceCullingNative();
+		}
+
+		[NativeName(NativeNameType.Func, "rlColorMask")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void RlColorMaskNative([NativeName(NativeNameType.Param, "r")] [NativeName(NativeNameType.Type, "bool")] byte r, [NativeName(NativeNameType.Param, "g")] [NativeName(NativeNameType.Type, "bool")] byte g, [NativeName(NativeNameType.Param, "b")] [NativeName(NativeNameType.Type, "bool")] byte b, [NativeName(NativeNameType.Param, "a")] [NativeName(NativeNameType.Type, "bool")] byte a)
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<byte, byte, byte, byte, void>)funcTable[649])(r, g, b, a);
+			#else
+			((delegate* unmanaged[Cdecl]<byte, byte, byte, byte, void>)funcTable[649])(r, g, b, a);
+			#endif
+		}
+
+		[NativeName(NativeNameType.Func, "rlColorMask")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void RlColorMask([NativeName(NativeNameType.Param, "r")] [NativeName(NativeNameType.Type, "bool")] bool r, [NativeName(NativeNameType.Param, "g")] [NativeName(NativeNameType.Type, "bool")] bool g, [NativeName(NativeNameType.Param, "b")] [NativeName(NativeNameType.Type, "bool")] bool b, [NativeName(NativeNameType.Param, "a")] [NativeName(NativeNameType.Type, "bool")] bool a)
+		{
+			RlColorMaskNative(r ? (byte)1 : (byte)0, g ? (byte)1 : (byte)0, b ? (byte)1 : (byte)0, a ? (byte)1 : (byte)0);
+		}
+
+		[NativeName(NativeNameType.Func, "rlSetCullFace")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void RlSetCullFaceNative([NativeName(NativeNameType.Param, "mode")] [NativeName(NativeNameType.Type, "int")] int mode)
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<int, void>)funcTable[650])(mode);
+			#else
+			((delegate* unmanaged[Cdecl]<int, void>)funcTable[650])(mode);
+			#endif
+		}
+
+		[NativeName(NativeNameType.Func, "rlSetCullFace")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void RlSetCullFace([NativeName(NativeNameType.Param, "mode")] [NativeName(NativeNameType.Type, "int")] int mode)
+		{
+			RlSetCullFaceNative(mode);
+		}
+
+		[NativeName(NativeNameType.Func, "rlEnableScissorTest")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void RlEnableScissorTestNative()
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<void>)funcTable[651])();
+			#else
+			((delegate* unmanaged[Cdecl]<void>)funcTable[651])();
+			#endif
+		}
+
+		[NativeName(NativeNameType.Func, "rlEnableScissorTest")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void RlEnableScissorTest()
+		{
+			RlEnableScissorTestNative();
+		}
+
+		[NativeName(NativeNameType.Func, "rlDisableScissorTest")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void RlDisableScissorTestNative()
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<void>)funcTable[652])();
+			#else
+			((delegate* unmanaged[Cdecl]<void>)funcTable[652])();
+			#endif
+		}
+
+		[NativeName(NativeNameType.Func, "rlDisableScissorTest")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void RlDisableScissorTest()
+		{
+			RlDisableScissorTestNative();
+		}
+
+		[NativeName(NativeNameType.Func, "rlScissor")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void RlScissorNative([NativeName(NativeNameType.Param, "x")] [NativeName(NativeNameType.Type, "int")] int x, [NativeName(NativeNameType.Param, "y")] [NativeName(NativeNameType.Type, "int")] int y, [NativeName(NativeNameType.Param, "width")] [NativeName(NativeNameType.Type, "int")] int width, [NativeName(NativeNameType.Param, "height")] [NativeName(NativeNameType.Type, "int")] int height)
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<int, int, int, int, void>)funcTable[653])(x, y, width, height);
+			#else
+			((delegate* unmanaged[Cdecl]<int, int, int, int, void>)funcTable[653])(x, y, width, height);
+			#endif
+		}
+
+		[NativeName(NativeNameType.Func, "rlScissor")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void RlScissor([NativeName(NativeNameType.Param, "x")] [NativeName(NativeNameType.Type, "int")] int x, [NativeName(NativeNameType.Param, "y")] [NativeName(NativeNameType.Type, "int")] int y, [NativeName(NativeNameType.Param, "width")] [NativeName(NativeNameType.Type, "int")] int width, [NativeName(NativeNameType.Param, "height")] [NativeName(NativeNameType.Type, "int")] int height)
+		{
+			RlScissorNative(x, y, width, height);
+		}
+
+		[NativeName(NativeNameType.Func, "rlEnableWireMode")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void RlEnableWireModeNative()
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<void>)funcTable[654])();
+			#else
+			((delegate* unmanaged[Cdecl]<void>)funcTable[654])();
+			#endif
+		}
+
+		[NativeName(NativeNameType.Func, "rlEnableWireMode")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void RlEnableWireMode()
+		{
+			RlEnableWireModeNative();
 		}
 	}
 }

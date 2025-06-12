@@ -79,22 +79,6 @@ namespace Hexa.NET.Raylib
 		[NativeName(NativeNameType.Value, "1")]
 		public const int SUPPORT_AUTOMATION_EVENTS = 1;
 
-		[NativeName(NativeNameType.Const, "SUPPORT_CLIPBOARD_IMAGE")]
-		[NativeName(NativeNameType.Value, "1")]
-		public const int SUPPORT_CLIPBOARD_IMAGE = 1;
-
-		[NativeName(NativeNameType.Const, "SUPPORT_FILEFORMAT_BMP")]
-		[NativeName(NativeNameType.Value, "1")]
-		public const int SUPPORT_FILEFORMAT_BMP = 1;
-
-		[NativeName(NativeNameType.Const, "SUPPORT_FILEFORMAT_PNG")]
-		[NativeName(NativeNameType.Value, "1")]
-		public const int SUPPORT_FILEFORMAT_PNG = 1;
-
-		[NativeName(NativeNameType.Const, "SUPPORT_FILEFORMAT_JPG")]
-		[NativeName(NativeNameType.Value, "1")]
-		public const int SUPPORT_FILEFORMAT_JPG = 1;
-
 		[NativeName(NativeNameType.Const, "MAX_FILEPATH_CAPACITY")]
 		[NativeName(NativeNameType.Value, "8192")]
 		public const int MAX_FILEPATH_CAPACITY = 8192;
@@ -115,9 +99,9 @@ namespace Hexa.NET.Raylib
 		[NativeName(NativeNameType.Value, "4")]
 		public const int MAX_GAMEPADS = 4;
 
-		[NativeName(NativeNameType.Const, "MAX_GAMEPAD_AXES")]
+		[NativeName(NativeNameType.Const, "MAX_GAMEPAD_AXIS")]
 		[NativeName(NativeNameType.Value, "8")]
-		public const int MAX_GAMEPAD_AXES = 8;
+		public const int MAX_GAMEPAD_AXIS = 8;
 
 		[NativeName(NativeNameType.Const, "MAX_GAMEPAD_BUTTONS")]
 		[NativeName(NativeNameType.Value, "32")]
@@ -172,12 +156,12 @@ namespace Hexa.NET.Raylib
 		public const int RL_MAX_SHADER_LOCATIONS = 32;
 
 		[NativeName(NativeNameType.Const, "RL_CULL_DISTANCE_NEAR")]
-		[NativeName(NativeNameType.Value, "0.001")]
-		public const double RL_CULL_DISTANCE_NEAR = 0.001;
+		[NativeName(NativeNameType.Value, "0.01")]
+		public const double RL_CULL_DISTANCE_NEAR = 0.01;
 
 		[NativeName(NativeNameType.Const, "RL_CULL_DISTANCE_FAR")]
-		[NativeName(NativeNameType.Value, "10000.0")]
-		public const double RL_CULL_DISTANCE_FAR = 10000.0;
+		[NativeName(NativeNameType.Value, "1000.0")]
+		public const double RL_CULL_DISTANCE_FAR = 1000.0;
 
 		[NativeName(NativeNameType.Const, "RL_DEFAULT_SHADER_ATTRIB_LOCATION_POSITION")]
 		[NativeName(NativeNameType.Value, "0")]
@@ -214,10 +198,6 @@ namespace Hexa.NET.Raylib
 		[NativeName(NativeNameType.Const, "RL_DEFAULT_SHADER_ATTRIB_LOCATION_BONEWEIGHTS")]
 		[NativeName(NativeNameType.Value, "8")]
 		public const int RL_DEFAULT_SHADER_ATTRIB_LOCATION_BONEWEIGHTS = 8;
-
-		[NativeName(NativeNameType.Const, "RL_DEFAULT_SHADER_ATTRIB_LOCATION_INSTANCE_TX")]
-		[NativeName(NativeNameType.Value, "9")]
-		public const int RL_DEFAULT_SHADER_ATTRIB_LOCATION_INSTANCE_TX = 9;
 
 		[NativeName(NativeNameType.Const, "RL_DEFAULT_SHADER_ATTRIB_NAME_POSITION")]
 		[NativeName(NativeNameType.Value, "\"vertexPosition\"")]
@@ -286,6 +266,10 @@ namespace Hexa.NET.Raylib
 		[NativeName(NativeNameType.Const, "SPLINE_SEGMENT_DIVISIONS")]
 		[NativeName(NativeNameType.Value, "24")]
 		public const int SPLINE_SEGMENT_DIVISIONS = 24;
+
+		[NativeName(NativeNameType.Const, "SUPPORT_FILEFORMAT_PNG")]
+		[NativeName(NativeNameType.Value, "1")]
+		public const int SUPPORT_FILEFORMAT_PNG = 1;
 
 		[NativeName(NativeNameType.Const, "SUPPORT_FILEFORMAT_GIF")]
 		[NativeName(NativeNameType.Value, "1")]
@@ -423,21 +407,33 @@ namespace Hexa.NET.Raylib
 		[NativeName(NativeNameType.Value, "256")]
 		public const int MAX_TRACELOG_MSG_LENGTH = 256;
 
+		[NativeName(NativeNameType.Const, "SUPPORT_CLIPBOARD_IMAGE")]
+		[NativeName(NativeNameType.Value, "1")]
+		public const int SUPPORT_CLIPBOARD_IMAGE = 1;
+
+		[NativeName(NativeNameType.Const, "SUPPORT_FILEFORMAT_BMP")]
+		[NativeName(NativeNameType.Value, "1")]
+		public const int SUPPORT_FILEFORMAT_BMP = 1;
+
+		[NativeName(NativeNameType.Const, "SUPPORT_FILEFORMAT_JPG")]
+		[NativeName(NativeNameType.Value, "1")]
+		public const int SUPPORT_FILEFORMAT_JPG = 1;
+
 		[NativeName(NativeNameType.Const, "RAYLIB_VERSION_MAJOR")]
 		[NativeName(NativeNameType.Value, "5")]
 		public const int RAYLIB_VERSION_MAJOR = 5;
 
 		[NativeName(NativeNameType.Const, "RAYLIB_VERSION_MINOR")]
-		[NativeName(NativeNameType.Value, "6")]
-		public const int RAYLIB_VERSION_MINOR = 6;
+		[NativeName(NativeNameType.Value, "5")]
+		public const int RAYLIB_VERSION_MINOR = 5;
 
 		[NativeName(NativeNameType.Const, "RAYLIB_VERSION_PATCH")]
 		[NativeName(NativeNameType.Value, "0")]
 		public const int RAYLIB_VERSION_PATCH = 0;
 
 		[NativeName(NativeNameType.Const, "RAYLIB_VERSION")]
-		[NativeName(NativeNameType.Value, "\"5.6-dev\"")]
-		public const string RAYLIB_VERSION = "5.6-dev";
+		[NativeName(NativeNameType.Value, "\"5.5\"")]
+		public const string RAYLIB_VERSION = "5.5";
 
 		[NativeName(NativeNameType.Const, "PI")]
 		[NativeName(NativeNameType.Value, "3.14159265358979323846f")]

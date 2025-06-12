@@ -222,12 +222,5 @@ namespace Hexa.NET.Raylib
 		[NativeName(NativeNameType.EnumItem, "SHADER_LOC_BONE_MATRICES")]
 		[NativeName(NativeNameType.Value, "28")]
 		LocBoneMatrices = unchecked(28),
-
-		/// <summary>
-		/// Shader location: vertex attribute: instanceTransform<br/>
-		/// </summary>
-		[NativeName(NativeNameType.EnumItem, "SHADER_LOC_VERTEX_INSTANCE_TX")]
-		[NativeName(NativeNameType.Value, "29")]
-		LocVertexInstanceTx = unchecked(29),
 	}
 }

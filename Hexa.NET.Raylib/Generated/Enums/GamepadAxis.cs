@@ -14,7 +14,7 @@ using System.Numerics;
 namespace Hexa.NET.Raylib
 {
 	/// <summary>
-	/// Gamepad axes<br/>
+	/// Gamepad axis<br/>
 	/// </summary>
 	[NativeName(NativeNameType.Enum, "GamepadAxis")]
 	[Flags]
