@@ -39,7 +39,7 @@ jobs:
         with:
           repository: "raysan5/raylib"
           path: "raylib"
-          ref: "5.5"
+          ref: 3e336e4
           submodules: true
 
       - name: Install Dependencies on Ubuntu
